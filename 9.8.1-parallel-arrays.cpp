@@ -3,7 +3,7 @@
  
  Project Exam Statistics
  
- //  PLACE YOUR NAME HERE
+ //  Trang Tran
  
 */
 #include <iostream>
