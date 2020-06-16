@@ -10,4 +10,7 @@ Press ``^ ` `` to open console and run.
 ## PC
 
 Press ``^ ` `` to open console.
-Execute `./make.bat <filename>`
+Goto folder where `main.cpp` is and run:
+```
+.\main.bat
+```
