@@ -12,5 +12,5 @@ Press ``^ ` `` to open console and run.
 Press ``^ ` `` to open console.
 Goto folder where `main.cpp` is and run:
 ```
-.\main.bat
+..\main.bat
 ```
