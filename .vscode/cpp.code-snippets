@@ -1,0 +1,15 @@
+{
+	"includeTemplate": {
+		"prefix": ["template","start"],
+		"body": [
+			"#include <iostream>",
+			"using namespace std;",
+			"",
+			"int main() {",
+			"\t$0",
+			"\treturn 0;",
+			"}"
+		],
+		"description": "Template for standard program"
+	}
+}
