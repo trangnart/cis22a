@@ -1,12 +1,12 @@
-/* 
+/*
  ARRAYS and FUNCTIONS: SEARCHING using the Linear Search function
                           // also known as Sequential Search
- 
- Find and fix errors. Run the program once and save the output as a comment at the end 
+
+ Find and fix errors. Run the program once and save the output as a comment at the end
  of the source file.
- 
- //  PLACE YOUR NAME HERE
- 
+
+ //  Jane Tran
+
 */
 #include <iostream>
 #include <fstream>
@@ -14,7 +14,7 @@
 using namespace std;
 
 const int MAX_SIZE = 100;
-int  search_List(int array[], int size, int target);
+int  searchList(int array[], int length, int target);
 
 int main()
 {
@@ -22,23 +22,24 @@ int main()
     int length = 10;    // actual size of list
     int min = 13;       // smallest value in list
     int max = 50;       // largest value in list
-    
+
     for (int i = 0; i < length; i++)
     {
         cout << list[i] << " ";
     }
     cout << endl;
-    
+
     for (int i = 0; i < 2 * length; i++) // SEARCH 2 * length times
     {
-        int target = rand() % (max - min) + min;  // generate a random target within the range min to max inclusive
-        int location = searchList(array[], target, size);
-        if (location = -1)
+        // remember inclusive means to add the extra one for 50
+        int target = rand() % (max - min + 1) + min;  // generate a random target within the range min to max inclusive
+        int location = searchList(list, length, target);
+        if (location != -1)
             cout << target << " FOUND at location: " << location << endl;
         else
             cout << target << " NOT found!" << endl;
     }
-    
+
     return 0;
 }
 
@@ -48,14 +49,14 @@ int main()
  It returns the index of the first element in the array that is equal to
  the target value.
  */
-int searchList(int array[], int size, int target)
+int searchList(int array[], int length, int target)
 {
     int index = 0;   // Used as a subscript to search array
     int pos   = -1;  // To record position of search value: -1 means not found
-    
-    while (index < size && pos == -1)
+
+    while (index < length && pos == -1)
     {
-        if (array[index] = target) // If the value is found
+        if (array[index] == target) // If the value is found
         {
             pos = index; // Record the value's subscript
         }
@@ -63,7 +64,3 @@ int searchList(int array[], int size, int target)
     }
     return pos; // Return the position, or -1
 }
-
-/* ************* OUTPUT
- 
- */
