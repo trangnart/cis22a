@@ -8,6 +8,7 @@
             "args": [
                 "-std=c++17",
                 "-stdlib=libc++",
+                "-Wsign-compare",
                 "-g",
                 "${file}",
                 "-o",
