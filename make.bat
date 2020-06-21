@@ -13,7 +13,7 @@ if not exist %source% (
 )
 
 for %%i in ("%source%") do ( set exe=%%~ni.exe )
-g++ -g %source% -o %exe%
+g++ -Wsign-compare -g %source% -o %exe%
 if %ERRORLEVEL%==0 %exe%
 
 exit /b 0
