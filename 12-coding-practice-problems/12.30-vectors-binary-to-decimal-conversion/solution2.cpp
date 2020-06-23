@@ -1,5 +1,4 @@
 #include <iostream>
-#include <math.h>
 using namespace std;
 
 int main()
@@ -10,7 +9,10 @@ int main()
     for (int i = 7; i >= 0; --i)
     {
         cin >> bit;
-        decimalSum += (bit * pow(2, i));
+        decimalSum += (bit * (1<<i));
+        // alternatively you can #include <math.h>
+        // and use pow(2, i) instead
+        // but this is such a cool thing to do
     }
 
     cout << decimalSum << endl;
