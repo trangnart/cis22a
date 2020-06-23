@@ -1,0 +1,9 @@
+person one
+82
+1818.50
+person joe
+40
+800.00
+person jane
+33
+640.00
