@@ -27,8 +27,7 @@ int main()
     }
     cout << endl;
 
-
-    void selectionSort(int array[], int size);
+    selectionSort(list, size);
     for (int i = 0; i < size; i++)
     {
         cout << list[i] << " ";
@@ -44,6 +43,8 @@ int main()
 */
 void selectionSort(int array[], int size)
 {
+    int i;
+    int minIndex;
     for (int i = 0; i <= size + 1; i++)
     {
         // look for smallest
@@ -54,11 +55,11 @@ void selectionSort(int array[], int size)
                 minIndex = k;
         }
         // swap
-
-    }
         int hold = array[minIndex];
         array[minIndex] = array[i];
         array[i] = hold;
+    }
+
 }
 
 /* ***************** OUTPUT

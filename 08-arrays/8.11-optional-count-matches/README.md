@@ -1,3 +1,4 @@
+# 8.11 Count Matches - functions
 Write a program whose input is a target integer, the number of elements in an array followed by the array elements, also integers, and whose output represents the number of times the target integer appears in the array.
 
 Ex: If the input is:

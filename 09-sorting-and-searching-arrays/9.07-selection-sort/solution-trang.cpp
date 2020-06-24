@@ -1,12 +1,12 @@
-/*
+/* 
  ARRAYS and FUNCTIONS: SORTING using the SELECTION SORT function
-
+ 
  Find and fix errors. Run the program once and save the output as a comment at the end
  of the source file.
-
-
+ 
+ 
  //  PLACE YOUR NAME HERE
-
+ 
 */
 
 #include <iostream>
@@ -27,8 +27,7 @@ int main()
     }
     cout << endl;
 
-
-    void selectionSort(int array[], int size);
+    selectionSort(list, size);
     for (int i = 0; i < size; i++)
     {
         cout << list[i] << " ";
@@ -44,23 +43,25 @@ int main()
 */
 void selectionSort(int array[], int size)
 {
-    for (int i = 0; i <= size + 1; i++)
+    int i;
+    int minIndex;
+    for (int i = 0; i < size - 1 ; i++)
     {
         // look for smallest
         int minIndex = i;
-        for(int k = i + 1; k <= size; k++)
+        for(int k = i + 1; k < size; k++)
         {
             if (array[k] < array[minIndex])
                 minIndex = k;
         }
         // swap
-
-    }
         int hold = array[minIndex];
         array[minIndex] = array[i];
         array[i] = hold;
+    }
+    
 }
 
 /* ***************** OUTPUT
-
+ 
 */

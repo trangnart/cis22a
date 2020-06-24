@@ -1,3 +1,4 @@
+# 10.34 LAB: Output values below an amount - functions
 Write a program that first gets a list of integers from input. The input begins with an integer indicating the number of integers that follow. Then, get the last value from the input, and output all integers less than or equal to that value.
 
 Ex: If the input is:

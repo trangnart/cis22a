@@ -1,3 +1,4 @@
+# 9.8 Lab: Parallel Arrays
 Project: Exam Statistics
 
 Here is what your program will do: first it welcomes the user and displays the purpose of the program:

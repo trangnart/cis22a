@@ -1,67 +1,22 @@
-/*
- ARRAYS and FUNCTIONS: SORTING using the SELECTION SORT function
-
- Find and fix errors. Run the program once and save the output as a comment at the end
- of the source file.
-
-
- //  PLACE YOUR NAME HERE
-
-*/
-
 #include <iostream>
-#include <fstream>
 
 using namespace std;
 
-void selectionSort(int array[], int size);
-
-int main()
-{
-    int list[100] = {50, 30, 80, 10, 30, 40, 90, 30, 80, 30};
-    int size = 10;
-
-    for (int i = 0; i < size; i++)
-    {
-        cout << list[i] << " ";
-    }
-    cout << endl;
-
-    selectionSort(list, size);
-    for (int i = 0; i < size; i++)
-    {
-        cout << list[i] << " ";
-    }
-    cout << endl;
-
-    return 0;
-}
-
-/* **************************************************
- This function sorts an array in ascending order
- using the selection sort algorithm
-*/
-void selectionSort(int array[], int size)
-{
-    int i;
-    int minIndex;
-    for (int i = 0; i <= size + 1; i++)
-    {
-        // look for smallest
-        int minIndex = i;
-        for(int k = i + 1; k <= size; k++)
-        {
-            if (array[k] < array[minIndex])
-                minIndex = k;
-        }
-        // swap
-        int hold = array[minIndex];
-        array[minIndex] = array[i];
-        array[i] = hold;
-    }
+// TODO: Write a void function SelectionSortDescendTrace() that takes
+//       an integer array and the number of elements in the array as arguments,
+//       and sorts the array into descending order.
+void SelectionSortDescendTrace(int numbers [], int numElements) {
 
 }
 
-/* ***************** OUTPUT
 
-*/
+int main(int argc, char* argv[]) {
+   int input, i = 0;
+   int numElements = 0;
+   int numbers [10];
+
+   // TODO: Read in a list of up to 10 positive integers; stop when
+   //       -1 is read. Then call SelectionSortDescendTrace() function.
+
+  return 0;
+}

@@ -1,3 +1,4 @@
+# 10.32 LAB: Warm up: People's weights (Vectors)
 Output each floating-point value with two digits after the decimal point, which can be achieved by executing
 `cout << fixed << setprecision(2);` once before all other cout statements.
 

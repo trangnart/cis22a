@@ -1,3 +1,4 @@
+# 10.20 LAB: Sort a vector
 Write a program that gets a list of integers from input, and outputs the integers in ascending order (lowest to highest). The first integer indicates how many numbers are in the list. Assume that the list will always contain less than 20 integers.
 
 Ex: If the input is:
