@@ -1,3 +1,4 @@
+# 12.2 PRACTICE: Expressions*: Simple floating-point expression
 Write an assignment statement for the following mathematical equation:
 
 ```

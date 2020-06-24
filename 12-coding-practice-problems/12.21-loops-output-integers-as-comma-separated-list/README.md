@@ -1,3 +1,4 @@
+# 12.21 PRACTICE: Loops*: Output integers as comma-separated list
 Given a list of integers, output those integers separated by a comma and space, except for the last which should be followed by a period (and newline). The first integers indicates how many integers are in the subsequent list. If the input is 4 1 7 3 5, the output should be: 1, 7, 3, 5.
 
 Hints:

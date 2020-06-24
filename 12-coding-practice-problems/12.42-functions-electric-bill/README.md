@@ -1,3 +1,4 @@
+# 12.42 PRACTICE: Functions***: Electric bill
 Southern California's electric company uses a "three tier" cost structure for household electric bills. As of Jan 2017, for a given month, the first 232 kWh is $0.08291, the next 696 kWh is $0.16838, and any additional kWh is $0.23336. Write a function that takes a household month's kWh, and the cutoffs and prices for the tiers, and returns that month's electric cost. If the input is 1700.0 232 0.08291 696 0.16838 0.23336, the output is $428.289 (output a $ before the result).
 
 Hints:

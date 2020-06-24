@@ -1,3 +1,4 @@
+# 12.16 PRACTICE: Loops (nested)**: Sum a given number of integers
 A user will enter an initial number, followed by that number of integers. Output those integers' sum. Repeat until the initial number is 0 or negative. Ex: If the user enters 3 9 6 1 0, the output is:
 
 ```

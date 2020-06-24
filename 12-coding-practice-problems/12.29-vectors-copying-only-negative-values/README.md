@@ -1,3 +1,4 @@
+# 12.29 PRACTICE: Vectors*: Copying only negative values
 A list of 6 integers is input into vector listInts. Complete the program to copy only the negative integers to a new vector listNegInts. Output the number of negative elements, and the negatives list. Ex: For input 5 -2 0 9 -66 -4, output is:
 ```
 3

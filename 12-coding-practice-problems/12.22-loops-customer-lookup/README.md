@@ -1,3 +1,4 @@
+# 12.22 PRACTICE: Loops**: Customer lookup
 A customer database file named CustomerDb.txt contains a list of customers (one per line), each customer consisting of a unique customer id followed by a first and last name. Given an id, output the customer's first and last name. If the id is not found, output "Not found". If the input id is 27, the output might be "Sarah Lee" (if found).
 
 FYI, the customer database's contents happen to be: 42 Mike Jones 16 Al Garcia 27 Sarah Lee 12 Stan Lee 99 Amy Hernandez

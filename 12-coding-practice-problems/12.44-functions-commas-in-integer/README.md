@@ -1,3 +1,4 @@
+# 12.44 PRACTICE: Functions***: Commas in integer
 Commas make large integers easier to read. Ex: 145,020 is easier to read than 145020. Write a function that takes an integer, and returns a string representation of that number with commas appropriately inserted. If the input if 145020, the function returns string "145,020".
 
 Hints:

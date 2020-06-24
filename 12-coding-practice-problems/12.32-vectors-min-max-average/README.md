@@ -1,3 +1,4 @@
+# 12.32 PRACTICE: Vectors**: Min, max, average
 Given 10 input integers, output the minimum, maximum, and average of those integers. If the input is 1 1 1 1 1 3 3 3 3 3, the output is:
 
 ```

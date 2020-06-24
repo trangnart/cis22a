@@ -1,3 +1,4 @@
+# 12.31 PRACTICE: Vectors***: Bowling score
 Bowling involves 10 frames. Each frame starts with 10 pins. The bowler has two throws to knock all 10 pins down. The total score is the sum of pins knocked down, with some special rules.
 
 For the first 9 frames:
@@ -10,7 +11,7 @@ Given integers represents all throws for a game, output on one line each frame's
 
 For simplicity, the input will always have 21 integers. If the game ended with fewer than 21 throws, the remaining integers will be 0's and can be ignored.
 
-Ex: A perfect game is one where every throw is a strike. The 21 input integers will be: 10 10 10 10 10 10 10 10 10 10 10 10. The output will be: 30 60 90 120 150 180 210 240 270 300.
+Ex: A perfect game is one where every throw is a strike. The 21 input integers will be: `10 10 10 10 10 10 10 10 10 10 10 10`. The output will be: `30 60 90 120 150 180 210 240 270 300`.
 
 Hints:
 * A first for loop should just read in the 21 scores in the first vector.

@@ -1,3 +1,4 @@
+# 12.1 Coding practice problems overview
 ## Why use Coding Practice Problems?
 Research shows that repeated practice moves knowledge into the long-term region of the brain, making tasks easier (compare the ease of driving now vs. when you first learned) and enabling new learning on top of that knowledge.
 

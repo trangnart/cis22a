@@ -1,3 +1,4 @@
+# 12.38 PRACTICE: Functions**: User age
 Various websites like Wikipedia or IMDB list not just a person's birthdate but also the person's current age. Given a person's birthdate and current date, output the person's age in years. The custom is to round down. If the input is 7 1 2000 2 15 2015, the output is 14 (because the person hasn't yet reached their 15th birthday). A person less than 1 has age 0.
 
 Hints:

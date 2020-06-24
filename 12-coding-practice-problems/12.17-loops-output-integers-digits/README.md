@@ -1,3 +1,4 @@
+# 12.17 PRACTICE: Loops**: Output integer's digits
 Given an input positive integer, output each digit on its own line, starting with the rightmost digit. Ex: If the input is 935, the output is:
 
 ```

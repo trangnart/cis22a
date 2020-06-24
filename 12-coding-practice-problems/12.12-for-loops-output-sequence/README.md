@@ -1,3 +1,4 @@
+# 12.12 PRACTICE: Loops (for)*: Output sequence
 (1) Given an integer n, write a for loop that outputs the numbers from -n to +n. Assume n is nonnegative. End the sequence with a newline.
 
 ```

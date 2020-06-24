@@ -1,3 +1,4 @@
+# 12.11 PRACTICE: Branches***: Next license plate number
 A state's Department of Motor Vehicles needs a program to generate license plate numbers. A license plate number consists of three letters followed by three digits, as in CBJ523. (So "number" is a bit inaccurate, but that's the standard word used for license plates). The plate numbers are given out in sequence, so given the current number, the program should output the next number. If the input is CBJ523, the output should be CBJ524. If the input is CBJ999, the output should be CBK000. For the last number ZZZ999, the next is AAA000.
 
 Hints:

@@ -1,3 +1,4 @@
+# 12.45 PRACTICE: Functions**: Next char in string
 Write a function that, given a string, index, and character, returns the index of the first occurrence of the character starting the search at the index. If not found, return -1. If the inputs are "Hello-friends", 3, and 'e', the function returns 9 (indexing the 'e' in friends).
 
 Hints:

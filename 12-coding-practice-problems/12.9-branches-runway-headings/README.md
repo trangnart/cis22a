@@ -1,3 +1,4 @@
+# 12.9 PRACTICE: Branches**: Runway headings
 Airport runways are numbered using a 2-digit number, like 09. The meaning generally is that planes taking off or landing on that runway will be facing 090 or 90 degrees rotated right from north, namely facing east. Given a runway number (integer), output the degrees followed by the closest direction indication (north, northeast, east, southeast, south, southwest, west, or northwest). If the input is 03, the output is: 30 degrees (northeast).
 
 Hints:

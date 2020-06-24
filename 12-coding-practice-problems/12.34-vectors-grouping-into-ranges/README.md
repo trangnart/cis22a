@@ -1,4 +1,5 @@
-A publisher may allow a reader to select a subset of chapters to purchase. Given 15 integers that are 0 or 1 indicating whether or not to include chapters 1 to 15, output the selection using shorthand for ranges of 3 or more (11, 12, 13 becomes 11-13). If the input is 1 1 1 1 0 1 0 1 1 0 1 1 1 0 0, the output should be: 1-4 6 8 9 11-13 If no chapters are selected, output: None For simplicity, follow every term including the last by one space (and end with newline).
+# 12.34 PRACTICE: Vectors***: Grouping into ranges
+A publisher may allow a reader to select a subset of chapters to purchase. Given 15 integers that are 0 or 1 indicating whether or not to include chapters 1 to 15, output the selection using shorthand for ranges of 3 or more (11, 12, 13 becomes 11-13). If the input is `1 1 1 1 0 1 0 1 1 0 1 1 1 0 0`, the output should be: `1-4 6 8 9 11-13` If no chapters are selected, output: None For simplicity, follow every term including the last by one space (and end with newline).
 
 Hints:
 * This problem is hard. Start by creating a for loop that just prints the selected chapters one by one, without shorthands for ranges. Your program will pass a few test cases.

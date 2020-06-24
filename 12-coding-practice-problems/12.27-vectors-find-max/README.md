@@ -1,3 +1,4 @@
+# 12.27 PRACTICE: Vectors*: Find max
 Traversing a vector to find the max (or min) is common. Given a vector of integers, output the maximum integer found in the vector. If the input is 4 3 8 2 6, the output is 8.
 
 Hints:

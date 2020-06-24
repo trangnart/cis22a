@@ -1,3 +1,4 @@
+# 12.33 PRACTICE: Vectors**: Mode
 The "mode" is a statistical summary of data (as are min, max, and average) representing the most commonly-occurring value. Given 10 integers ranging from 0 to 99, output the mode and its frequency. If the input is 1 1 1 1 2 2 9 8 7 6, the output is:
 
 ```

@@ -1,3 +1,4 @@
+# 12.43 PRACTICE: Functions*: Digits to number
 Given a vector of digits (0-9) for a decimal number, write a function that returns a single integer. The 0'th element is the decimal number's one's place. If the vector's elements are 9, 6, 2, the function returns integer 269.
 
 Hints:

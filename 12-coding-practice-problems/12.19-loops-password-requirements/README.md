@@ -1,3 +1,4 @@
+# 12.19 PRACTICE: Loops*: Password requirements
 Websites commonly require a password that satisfies several requirements. Write a program that checks if an input string satisfies the following (error message is shown for each)
 
 * At least 8 characters (Too short)

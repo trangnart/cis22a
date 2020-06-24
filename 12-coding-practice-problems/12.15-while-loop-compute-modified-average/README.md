@@ -1,3 +1,4 @@
+# 12.15 PRACTICE: Loops (while)**: Compute modified average
 Compute the average of a list of user-entered integers representing rolls of two dice. The list ends when 0 is entered. Integers must be in the range 2 to 12 (inclusive); integers outside the range don't contribute to the average. Output the average, and the number of valid and invalid integers (excluding the ending 0). If only 0 is entered, output 0. The output may be a floating-point value. Ex: If the user enters 8 12 13 0, the output is:
 
 ```
