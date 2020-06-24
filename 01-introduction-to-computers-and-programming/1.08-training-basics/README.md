@@ -1,3 +1,4 @@
+# 1.8 zyLab training: Basics
 While the zyLab platform can be used without training, a bit of training may help some students avoid common issues.
 
 The assignment is to get an integer from input, and output that integer squared, ending with newline. (Note: This assignment is configured to have students programming directly in the zyBook. Instructors may instead require students to upload a file). Below is a program that's been nearly completed for you.

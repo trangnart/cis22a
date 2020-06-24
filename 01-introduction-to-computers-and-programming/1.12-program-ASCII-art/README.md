@@ -1,3 +1,4 @@
+# 1.12 LAB*: Program: ASCII art
 This zyLab activity is the traditional programming assignment, typically requiring a few hours over a week. The previous sections provide warm up exercises intended to help a student prepare for this programming assignment.
 
 
