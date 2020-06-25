@@ -18,8 +18,8 @@ void selectionSort(int array[], int size);
 
 int main()
 {
-    int list[100] = {50, 30, 80, 10, 30, 40, 90, 30, 80, 30};
-    int size = 10;
+    int list[100] = {29,18, 45, 7, 16}; //{50, 30, 80, 10, 30, 40, 90, 30, 80, 30};
+    int size = 5;
 
     for (int i = 0; i < size; i++)
     {
@@ -58,6 +58,13 @@ void selectionSort(int array[], int size)
         int hold = array[minIndex];
         array[minIndex] = array[i];
         array[i] = hold;
+
+        cout << "i=" << i << endl;
+        for(int j=0; j < size-1; j++)
+        {
+            cout << array[j] << " ";
+        }
+        cout << endl;
     }
     
 }
