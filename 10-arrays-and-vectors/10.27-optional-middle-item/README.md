@@ -1,3 +1,4 @@
+# 10.27 LAB: Middle item
 Given a sorted list of integers, output the middle integer. Assume the number of integers is always odd.
 
 Ex: If the input is:

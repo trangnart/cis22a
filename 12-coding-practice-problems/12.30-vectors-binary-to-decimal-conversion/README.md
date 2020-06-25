@@ -1,3 +1,4 @@
+# 12.30 PRACTICE: Vectors**: Binary to decimal conversion
 A binary number's digits are only 0's and 1's, which each digit's weight being an increasing power of 2.
 Ex: 110 is `1*2^2` + `1*2^1` + `0*2^0` = `1*4` + `1*2` + `0*1` = `4` + `2` + `0` = `6`. A user enters an 8-bit binary number as 1's and 0's separated by spaces. Then compute and output the decimal equivalent. Ex: For input `0 0 0 1 1 1 1 1`, the output is:
 

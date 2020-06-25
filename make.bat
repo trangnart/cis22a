@@ -20,7 +20,7 @@ exit /b 0
 
 :INIT
 for /f %%i in ('dir /b "*.*-*"') do (
-    for %%j in (main.cpp README.md) do (
+    for %%j in (main.cpp README.md solution.cpp) do (
         if not exist "%%i\\%%j" (
             copy /y nul "%%i\\%%j" > nul
         )

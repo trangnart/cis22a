@@ -1,3 +1,4 @@
+# 10.25 LAB: Replacement words
 Write a program that replaces words in a sentence. The input begins with an integer indicating the number of word replacement pairs (original and replacement) that follow. The next line of input begins with an integer indicating the number of words in the sentence that follows. Any word on the original list is replaced.
 
 Ex: If the input is:

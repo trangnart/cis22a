@@ -1,3 +1,4 @@
+# 10.16 LAB: Even/odd values in a vector
 Write a program that reads a list of integers, and outputs whether the list contains all even numbers, odd numbers, or neither. The input begins with an integer indicating the number of integers that follow.
 
 Ex: If the input is:
