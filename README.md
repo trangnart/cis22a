@@ -4,8 +4,10 @@ This is my first repository.
 
 ## Mac
 
-Press `^ F5` to build.
-Press ``^ ` `` to open console and run.
+* Press `^ F5` to build.
+* Right-click on the folder where the file is and select `Open in Terminal`
+* Type `./sol` then `<tab>` to run
+* After you've done with the project click on the Trash icon to delete the session.
 
 ## PC
 
