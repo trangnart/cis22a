@@ -2,7 +2,7 @@
 Driving is expensive. Write a program with a car's miles/gallon and gas dollars/gallon (both doubles) as input, and output the gas cost for 20 miles, 75 miles, and 500 miles.
 
 Output each floating-point value with two digits after the decimal point, which can be achieved by executing
-`cout << fixed << setprecision(2);` once before all other cout statements.
+`cout << fixed << setprecision(2);` once before all other `cout` statements.
 
 Ex: If the input is:
 ```

@@ -8,14 +8,19 @@
             "name": "clang++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "osx": {
+                "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            },
+            "windows": {
+                "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            },
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb",
-            "preLaunchTask": "C/C++: clang++ build active file"
+            "preLaunchTask": "C/C++: build active file"
         }
     ]
 }

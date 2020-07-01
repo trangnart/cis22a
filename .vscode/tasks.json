@@ -3,17 +3,28 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "C/C++: clang++ build active file",
-            "command": "/usr/bin/clang++",
-            "args": [
-                "-std=c++17",
-                "-stdlib=libc++",
-                "-Wsign-compare",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out"
-            ],
+            "label": "C/C++: build active file",
+            "windows": {
+                "command": "g++.exe",
+                "args": [
+                    "-g",
+                    "${file}",
+                    "-o",
+                    "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                ]
+            },
+            "osx": {
+                "command": "/usr/bin/clang++",
+                "args": [
+                    "-std=c++17",
+                    "-stdlib=libc++",
+                    "-Wsign-compare",
+                    "-g",
+                    "${file}",
+                    "-o",
+                    "${fileDirname}/${fileBasenameNoExtension}.out"
+                ]
+            },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -23,25 +34,15 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
-        },
-        {
-            "type": "shell",
-            "label": "C/C++: g++.exe build active file",
-            "command": "g++.exe",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build"
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": true,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": true
+            }
         }
     ]
 }

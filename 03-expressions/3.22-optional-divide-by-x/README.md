@@ -1,5 +1,5 @@
 # 3.22 LAB: Divide by x
-Write a program using integers userNum and x as input, and output userNum divided by x three times.
+Write a program using integers `userNum` and `x` as input, and output `userNum` divided by `x` three times.
 
 Ex: If the input is:
 
