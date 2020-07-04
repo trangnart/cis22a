@@ -1,5 +1,6 @@
 # 2.9 LAB: Warm up: Basic output with variables
-A variable like `userNum` can store a value like an integer. Extend the given program as indicated.
+A variable like `userNum` can store a value like an integer.
+Extend the given program as indicated.
 
 1. Output the user's input. (2 pts)
 2. Output the input squared and cubed. Hint: Compute squared as `userNum * userNum`. (2 pts)

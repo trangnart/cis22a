@@ -7,12 +7,15 @@ int main() {
 
    cin >> baseChar;
    cin >> headChar;
-   cout << "     " << headChar << endl;
-   cout << "     " << headChar << headChar << endl;
-   cout << baseChar << baseChar << baseChar << baseChar << baseChar << headChar << headChar << headChar << endl;
-   cout << baseChar << baseChar << baseChar << baseChar << baseChar << headChar << headChar << headChar << headChar << endl;
-   cout << baseChar << baseChar << baseChar << baseChar << baseChar << headChar << headChar << headChar << endl;
-   cout << "     " << headChar << headChar << endl;
-   cout << "     " << headChar << endl;
+   cout << "     " << headChar << endl
+        << "     " << headChar << headChar << endl
+        << baseChar << baseChar << baseChar << baseChar << baseChar
+        << headChar << headChar << headChar << endl
+        << baseChar << baseChar << baseChar << baseChar << baseChar
+        << headChar << headChar << headChar << headChar << endl
+        << baseChar << baseChar << baseChar << baseChar << baseChar
+        << headChar << headChar << headChar << endl
+        << "     " << headChar << headChar << endl
+        << "     " << headChar << endl;
    return 0;
 }

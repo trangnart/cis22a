@@ -10,7 +10,8 @@ the output is:
 ```
 1600 6
 ```
-Note: Integer division discards the fraction. Hence the average of 8 10 5 4 is output as 6, not 6.75.
+Note: Integer division discards the fraction.
+Hence the average of 8 10 5 4 is output as 6, not 6.75.
 
 Note: The test cases include four very large input values whose product results in overflow. You do not need to do anything special, but just observe that the output does not represent the correct product (in fact, four positive numbers yield a negative output; wow).
 
@@ -20,7 +21,7 @@ Submit the above for grading. Your program will fail the last test cases (which 
 Also output the product and average, using floating-point arithmetic.
 
 Output each floating-point value with three digits after the decimal point, which can be achieved by executing
-`cout << fixed << setprecision(3);` once before all other cout statements.
+`cout << fixed << setprecision(3);` once before all other `cout` statements.
 
 Ex: If the input is:
 ```

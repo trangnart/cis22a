@@ -1,15 +1,27 @@
 #include <iostream>
+#include <cmath>
+#include <string>
 using namespace std;
 
 int main() {
-   int currentPrice;
-   int lastMonthsPrice;
-   
+   int currentPrice,
+       lastMonthsPrice,
+       changePrice;
+   string prefix;
+
    cin >> currentPrice;
    cin >> lastMonthsPrice;
 
-   cout << "This house is $" << currentPrice << ". The change is $" << currentPrice - lastMonthsPrice  << " since last month." << endl;
-   cout << "The estimated monthly mortgage is $" << (currentPrice * 0.051) / 12 << "." << endl;
+   changePrice = currentPrice - lastMonthsPrice;
+   prefix = changePrice < 0 ? "-$" : "$";
+
+   cout << "This house is $" << currentPrice << ". ";
+   cout << "The change is "
+        << prefix << abs(changePrice)
+        << " since last month.\n";
+   cout << "The estimated monthly mortgage is $"
+        << (currentPrice * 0.051) / 12
+        << ".\n";
 
    return 0;
 }
