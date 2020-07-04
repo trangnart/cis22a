@@ -65,5 +65,13 @@
         "utility": "cpp",
         "vector": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.rulers": [
+        80,120
+    ],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#333333"
+    }
 }
