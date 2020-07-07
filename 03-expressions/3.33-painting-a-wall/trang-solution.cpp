@@ -1,6 +1,6 @@
 #include <iostream>
-#include <cmath>                   // Note: Needed for math functions in part (3)
-#include <iomanip>                 // For setprecision
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 int main() {
@@ -15,8 +15,9 @@ int main() {
     cin >> wallWidth;
 
     wallArea = wallHeight * wallWidth;
-    cout << fixed << setprecision(2);                // FIXME (1): Calculate the wall's area
-    cout << "Wall area: " << wallArea << " square feet" << endl;  // FIXME (1): Finish the output statement
+    
+    cout << fixed << setprecision(2);
+    cout << "Wall area: " << wallArea << " square feet" << endl;
 
     cout << "Paint needed: " << wallArea / 350 << " gallons" << endl;
 
