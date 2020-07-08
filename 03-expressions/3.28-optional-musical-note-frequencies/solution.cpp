@@ -8,7 +8,7 @@ int main() {
     double frequency;
 
     cout << fixed << setprecision(2);
-    cout << "Enter frequency: " << R << " ";
+    cout << "Enter frequency: ";
     cin >> frequency;
     cout << frequency << " ";
 
