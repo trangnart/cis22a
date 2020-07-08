@@ -73,5 +73,9 @@
     ],
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#333333"
-    }
+    },
+    "cSpell.words": [
+        "cout",
+        "setprecision"
+    ]
 }

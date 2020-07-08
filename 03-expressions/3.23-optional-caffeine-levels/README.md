@@ -1,7 +1,7 @@
 # 3.23 LAB: Caffeine levels
 A half-life is the amount of time it takes for a substance or entity to fall to half its original value.
 Caffeine has a half-life of about 6 hours in humans.
-Given caffeine amount (in mg) as input, output the caffeine level after 6, 12, and 24 hours.
+Given caffeine amount (in mg) `as` input, output the caffeine level after 6, 12, and 24 hours.
 
 Output each floating-point value with two digits after the decimal point, which can be achieved by executing
 `cout << fixed << setprecision(2);` once before all other `cout` statements.
