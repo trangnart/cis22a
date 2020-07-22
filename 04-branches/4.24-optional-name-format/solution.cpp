@@ -4,8 +4,12 @@ using namespace std;
 
 int main()
 {
-    string name, firstName, lastName, middleName;
-    int first_space, second_space;
+    string name,
+           firstName,
+           lastName,
+           middleName = "",
+           initials = "";
+    size_t first_space, second_space;
     // gets the whole line
     // name = "first middle last"
     //         01234567890123456
@@ -20,16 +24,24 @@ int main()
     // second_space = 12
     second_space = name.find(" ", first_space+1);
 
-    /*
-     put your if statement here to check if there are 2 or 1 space
-     if (second_space != string::npos) // means there's no second space
-    */
+    if (second_space == string::npos) {
+        // no second space has only "first last" no "middle"
+        // name = "first last"
+        //         0123456789
+        lastName = name.substr(first_space+1, name.length()-first_space-1);
+    } else {
+        // second_space - first_space - 1 = 5
+        middleName = name.substr(first_space+1, second_space-first_space-1);
+        // name.length() = 17
+        lastName = name.substr(second_space+1, name.length()-second_space-1);
+    }
 
-    // second_space - first_space - 1 = 5
-    middleName = name.substr(first_space+1, second_space-first_space-1);
-    // name.length() = 17
-    lastName = name.substr(second_space+1, name.length()-second_space-1);
-
+    // now we have all the strings we need, takes first and middle initals
+    initials = initials + firstName.at(0) + ".";
+    if (middleName != "") {
+        initials = initials + middleName.at(0) + ".";
+    }
+    cout << lastName + ", " + initials << endl;
 
     return 0;
 }
