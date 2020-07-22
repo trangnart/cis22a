@@ -7,6 +7,7 @@ The coin types are:
 * Dimes
 * Nickels
 * Pennies
+
 Use singular and plural coin names as appropriate,
 like `1 Penny` vs. `2 Pennies`.
 
