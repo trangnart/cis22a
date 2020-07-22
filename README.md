@@ -6,7 +6,7 @@
 
 Press `` Control-Option-` `` to open terminal where file is (or Right-click on the folder where the file is and select `Open in Terminal`)
 
-* Press `Control-Shift-B` to build.
+* Press `Command-Shift-B` to build.
 * Press `Control-Option-\` to switch to terminal.
 * Type `./sol` then `<tab>` to run
 * After you've done with the project click on the Trash icon to delete the session.
