@@ -10,6 +10,11 @@ int main() {
 
     cin >> changeAmt;
 
+    if (changeAmt <= 0) {
+        cout << "No change\n";
+        return 1;
+    }
+
     // how many of each? ex 151
     dollars     = changeAmt / 100; // 151 / 100 = 1 (dollars)
     changeAmt  %= 100;             // 151 % 100 = 51 (changeAmt)
