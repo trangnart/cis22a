@@ -4,9 +4,9 @@ using namespace std;
 
 int main() {
     string abbrev;
+    cout << "Input an abbreviation:" << endl;
     cin >> abbrev;
-    cout << "Input an abbreviation:" << endl << abbrev << endl;
-    
+
     if (abbrev == "LOL")
         cout << "laughing out loud" << endl;
 
