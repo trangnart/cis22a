@@ -14,8 +14,10 @@ int main() {
     else if (blue < red) {
         smallest_val = blue;
     }
-    cout << red - smallest_val  << " " << green - smallest_val
-         << " " << blue - smallest_val << endl;
+    
+    cout << red - smallest_val << " "
+         << green - smallest_val << " "
+         << blue - smallest_val << endl;
 
    return 0;
 }
