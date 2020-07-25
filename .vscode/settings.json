@@ -77,5 +77,8 @@
     "cSpell.words": [
         "cout",
         "setprecision"
+    ],
+    "cSpell.ignoreWords": [
+        "ttyl"
     ]
 }
