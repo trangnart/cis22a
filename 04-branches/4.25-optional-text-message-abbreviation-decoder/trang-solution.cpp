@@ -7,22 +7,23 @@ int main() {
     cout << "Input an abbreviation:" << endl;
     cin >> abbrev;
 
-    if (abbrev == "LOL")
+    if (abbrev == "LOL") {
         cout << "laughing out loud" << endl;
-
-    else if (abbrev == "IDK")
+    }
+    else if (abbrev == "IDK") {
         cout << "I don't know" << endl;
-
-    else if (abbrev == "BFF")
+    }
+    else if (abbrev == "BFF") {
         cout << "best friends forever" << endl;
-
-    else if (abbrev == "IMHO")
+    }
+    else if (abbrev == "IMHO") {
         cout << "in my humble opinion" << endl;
-
-    else if (abbrev == "TMI")
+    }
+    else if (abbrev == "TMI") {
         cout << "too much information" << endl;
-
-    else
+    }
+    else {
         cout << "Unknown" << endl;
+    }
    return 0;
 }
