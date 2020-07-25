@@ -17,33 +17,40 @@ int main() {
    Pennies = Cents / 1;
 
    if (total_change >= 1) {
-      if (Dollars > 1)
+      if (Dollars > 1) {
          cout << Dollars << " Dollars" << endl;
-      else if (Dollars == 1)
+      }
+      else if (Dollars == 1) {
          cout << Dollars << " Dollar" << endl;
-
-      if (Quarters > 1)
+      }
+      if (Quarters > 1) {
          cout << Quarters << " Quarters" << endl;
-      else if (Quarters == 1)
+      }
+      else if (Quarters == 1) {
          cout << Quarters << " Quarter" << endl;
-
-      if (Dimes > 1)
+      }
+      if (Dimes > 1) {
          cout << Dimes << " Dimes" << endl;
-      else if (Dimes == 1)
+      }
+      else if (Dimes == 1) {
          cout << Dimes << " Dime" << endl;
-
-      if (Nickels > 1)
+      }
+      if (Nickels > 1) {
          cout << Nickels << " Nickels" << endl;
-      else if (Nickels == 1)
+      }
+      else if (Nickels == 1) {
          cout << Nickels << " Nickel" << endl;
-
-      if (Pennies > 1)
+      }
+      if (Pennies > 1) {
          cout << Pennies << " Pennies" << endl;
-      else if (Pennies == 1)
+      }
+      else if (Pennies == 1) {
          cout << Pennies << " Penny" << endl;
+      }
    }
-   else
+   else {
          cout << "No change" << endl;
+   }
 
    return 0;
 }
