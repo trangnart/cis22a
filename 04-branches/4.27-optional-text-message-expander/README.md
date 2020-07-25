@@ -1,6 +1,7 @@
 # 4.27 LAB*: Program: Text message expander
 ## Input/Output
-(1) Get a line of text from the user. Output that line.
+Get a line of text from the user.
+Output that line.
 
 Ex:
 ```
@@ -10,7 +11,7 @@ You entered: IDK how that happened. TTYL.
 ```
 
 ## Expand abbreviations
-(2) Output the line again, this time expanding common text message abbreviations.
+Output the line again, this time expanding common text message abbreviations.
 
 Ex:
 ```
