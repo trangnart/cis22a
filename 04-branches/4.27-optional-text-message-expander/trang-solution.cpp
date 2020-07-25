@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     string user_str;
-    size_t IDK, BFF, JK, TMI, TTYL;
+    size_t IDK, BFF, TMI, TTYL, JK;
     getline(cin, user_str);
     cout << "Enter text:\n" << user_str << endl
          << "You entered: " << user_str << endl
@@ -20,6 +20,7 @@ int main() {
         user_str.replace(BFF,3,"best friend forever");
         cout << user_str << endl;
     }
+
     TMI = user_str.find("TMI", TMI);
     if (TMI != string::npos) {
         user_str.replace(TMI,3,"too much information");
