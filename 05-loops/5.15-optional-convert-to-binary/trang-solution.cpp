@@ -13,7 +13,7 @@ int main() {
         binary += to_string(x);
         num = num / 2;
     }
-    cout << binary;
+    cout << binary << endl;
 
    return 0;
 }
