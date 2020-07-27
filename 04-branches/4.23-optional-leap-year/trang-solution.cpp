@@ -1,14 +1,14 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main() {
     int year;
-    string leap_year;
+    bool century_year;
 
     cin >> year;
-
-    if ((year % 100 != 0 && year % 4 == 0) || (year % 100 == 0 && year % 400 == 0)) {
+    century_year = year % 100 == 0;
+    
+    if ((century_year && year % 400 == 0) || (!century_year && year % 4 == 0)) {
         cout << year << " - leap year" << endl;
     }
     else {
