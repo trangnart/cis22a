@@ -24,7 +24,7 @@ int main() {
         airFare += 10;
     }
     if (checkedBags > 1) {
-        airFare += (checkedBags * 50)-25;
+        airFare += ((checkedBags-1) * 50)-25;
     }
 
     cout << airFare << endl;
