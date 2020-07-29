@@ -32,3 +32,13 @@ You can assume the two equations have no more than one solution.
 
 _Note_: Elegant mathematical techniques exist to solve such linear equations.
 However, for other kinds of equations or situations, brute force can be handy.
+
+## Hints
+Here's the loop you need to construct:
+```
+for (int x = -10; x <= 10; ++x) {
+    for (int y = -10; y <= 10; ++y) {
+       ...
+    }
+}
+```

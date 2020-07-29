@@ -9,15 +9,16 @@ int main() {
     cin >> x2 >> y2 >> sol2;
 
     for (x = -10; x <= 10; ++x) {
-        for (y = -10; y < 10; ++y) {
+        for (y = -10; y <= 10; ++y) {
             int test_sol1 = x1*x + y1*y;
             int test_sol2 = x2*x + y2*y;
             if (test_sol1 == sol1 && test_sol2 == sol2) {
                 cout << x << " " << y << endl;
-                break;
+                return 0;
             }
         }
     }
+    cout << "No solution\n";
 
-    return 0;
+    return 1;
 }
