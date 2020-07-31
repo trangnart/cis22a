@@ -9,11 +9,10 @@ int main() {
       cout << "Second integer can't be less than the first." << endl;
     }
 
-    for (int i = y; i >= x; ++i) {
-        while (x <= i) {
-            cout << x << " ";
-            x = x + 10;
-        }
+    else {
+      for (int i = x; i <= y; i+=10) {
+        cout << i << " ";
+      }
     }
 
    return 0;
