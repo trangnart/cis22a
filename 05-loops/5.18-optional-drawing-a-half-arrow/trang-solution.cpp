@@ -13,18 +13,24 @@ int main() {
     cout << "Enter arrow head width:" << endl;
     cin >> arrowHeadWidth;
 
+    while (arrowHeadWidth <= arrowBaseWidth) {
+        cout << "Enter arrow head width:" << endl;
+        cin >> arrowHeadWidth;
+    }
+
     for (int i = 0; i < arrowBaseHeight; ++i) {
-        for (int i = 0; i < arrowBaseWidth; ++i) {
+        for (int j = 0; j < arrowBaseWidth; ++j) {
             cout << "*";
         }
         cout << endl;
     }
 
     for (int i = arrowHeadWidth; i >= 1; --i) {
-        for (int z = i; z >= 1; --z) {
+        for (int j = i; j >= 1; --j) {
             cout << "*";
         }
         cout << endl;
     }
+    
     return 0;
 }
