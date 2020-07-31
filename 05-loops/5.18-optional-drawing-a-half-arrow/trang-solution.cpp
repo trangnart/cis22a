@@ -3,15 +3,14 @@
 using namespace std;
 
 int main() {
-    int arrowBaseHeight, arrowBaseWidth, arrowHeadWidth;
+    int arrowBaseHeight, arrowBaseWidth;
+    int arrowHeadWidth = -1;
+    
     cout << "Enter arrow base height:" << endl;
     cin >> arrowBaseHeight;
 
     cout << "Enter arrow base width:" << endl;
     cin >> arrowBaseWidth;
-
-    cout << "Enter arrow head width:" << endl;
-    cin >> arrowHeadWidth;
 
     while (arrowHeadWidth <= arrowBaseWidth) {
         cout << "Enter arrow head width:" << endl;
@@ -31,6 +30,6 @@ int main() {
         }
         cout << endl;
     }
-    
+
     return 0;
 }
