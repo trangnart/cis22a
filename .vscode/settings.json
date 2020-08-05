@@ -76,7 +76,9 @@
     },
     "cSpell.words": [
         "cout",
-        "setprecision"
+        "cstdlib",
+        "setprecision",
+        "srand"
     ],
     "cSpell.ignoreWords": [
         "ttyl"
