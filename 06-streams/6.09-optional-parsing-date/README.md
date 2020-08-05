@@ -64,5 +64,5 @@ Assuming you've done [6.08] you know the basics of string manipulation.
 If you haven't got the concept, return to [6.08] and study again.
 
 [4.24]: ../../04-branches/4.24-optional-name-format/paul-solution.cpp
-[6.08]: ../06-streams/6.08-optional-parsing-strings/README.md
+[6.08]: ../6.08-optional-parsing-strings/README.md
 [ex-read-file.cpp]: ex-read-file.cpp
