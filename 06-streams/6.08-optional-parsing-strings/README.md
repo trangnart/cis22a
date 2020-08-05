@@ -41,30 +41,30 @@ Store the strings in two separate variables and output the strings.
 ```
 Enter input string:
 Jill, Allen
-First word: Jill
-Second word: Allen
+First word: "Jill"
+Second word: "Allen"
 ```
 
 ## Multiple lines of input
 Using a loop, extend the program to handle multiple lines of input.
 Continue until the user enters `q` to quit.
 
-### Example
+### Examples
 ```
 Enter input string:
 Jill, Allen
-First word: Jill
-Second word: Allen
+First word: "Jill"
+Second word: "Allen"
 
 Enter input string:
 Golden , Monkey
-First word: Golden
-Second word: Monkey
+First word: "Golden"
+Second word: "Monkey"
 
 Enter input string:
 Washington,DC
-First word: Washington
-Second word: DC
+First word: "Washington"
+Second word: "DC"
 
 Enter input string:
 q
