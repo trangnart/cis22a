@@ -69,3 +69,77 @@ Second word: "DC"
 Enter input string:
 q
 ```
+
+---
+## String Parsing Functions
+<img src="cpp-string-parsing.svg">
+
+### Finding a character in a string
+```cpp
+size_t find(char c);
+```
+Function returns the _index_ position of the character in the string.
+If not found, returns `string::npos`.
+
+#### Example
+```cpp
+string s = "Trang Tran";
+size_t pos = s.find('g');
+cout << "char 'g' at pos " << pos << endl;
+pos = s.find('j');
+if (pos == string::npos) {
+  cout << "char 'j' not found\n";
+}
+```
+
+### Getting a substring
+```cpp
+string substr(size_t start, size_t len);
+```
+Returns a substring given a `start` and `len`.
+
+#### Example
+Continuing with the example above.
+```cpp
+size_t pos = s.find(' ');
+if (pos != string::npos) {
+  string first = s.substr(0, pos);
+  cout << "first name: " << first << endl;
+}
+```
+
+### Find first/last not of
+```cpp
+size_t pos find_first_not_of(char c);
+size_t pos find_last_not_of(char c);
+```
+Find the first or last occurrence of anything that is not `c`.
+
+#### Example
+```cpp
+        //  012345678901
+string s = "****JANE****";
+size_t beg = s.find_first_not_of('*');
+size_t end = s.find_last_not_of('*');
+// beg = 4, end = 7
+// remember to +1
+string name = s.substr(beg, end - beg + 1);
+cout << "Name without *: " << name << endl;
+```
+
+---
+## Trim Spaces
+Make a copy of [ex-trim-asterisks.cpp] and create your file called
+`ex-trim-spaces.cpp`.
+Instead of trimming asterisks, trim spaces surrounding a word.
+
+### Make a function
+Make a function called `trim()` that takes in a `string` that may have
+surrounding spaces and return a `string` without spaces.
+
+#### Prototype
+```
+string trim(string s);
+```
+
+[ex-trim-asterisks.cpp]: ex-trim-asterisks.cpp
