@@ -23,3 +23,18 @@ In each loop iteration, check if the difference between
 
 Don't try to check the max difference for the first number in the list,
 since no previous number exists.
+
+## New Function
+
+### `abs()`
+```
+int bas(int x);
+long abs(long x);
+long long abs(long long x);
+```
+
+#### Example
+```cpp
+int x = -10231;
+cout << "Absolute value of " x << " is " << abs(x) << endl;
+```
