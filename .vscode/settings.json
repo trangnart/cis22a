@@ -79,7 +79,8 @@
         "cstdlib",
         "setprecision",
         "srand",
-        "stoi"
+        "stoi",
+        "substr"
     ],
     "cSpell.ignoreWords": [
         "ttyl"
