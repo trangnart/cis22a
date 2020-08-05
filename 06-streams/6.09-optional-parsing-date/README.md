@@ -10,7 +10,7 @@ Output each correct date as: `3/1/1990`.
 ### Input
 Input is the file called `dates.txt`.
 Include `fstream` and use `ifstream` to read the file instead of reading it
-from the keyboard.
+from the keyboard (see below).
 
 File content looks something like this:
 ```
@@ -34,9 +34,8 @@ I'll let you use my `split()` function in Section [4.24] instead of
 doing your own space-finding.
 Figure out how to use it :)
 
-
 ---
-## Practice Concepts
+## Concepts
 
 ### 1 Reading a File
 Learn how to read a file by studying [ex-read-file.cpp].
@@ -59,7 +58,35 @@ Create your version of [ex-read-file.cpp]
 
 Congratulations! Use this to write your solution.
 
-### 2 Parsing Strings
+### 2 File Input
+The basic structure of file input (read a file):
+```cpp
+#include <fstream>
+int main() {
+    string line;
+    ifstream in;
+    in.open("file.txt");
+    if (!in.is_open())
+        return 1; // error
+    while (!in.eof()) {
+        getline(in, line);
+        if (in.fail())
+            continue; // error
+        // life is good
+        cout << line << endl;
+    }
+    in.close();
+    return 0;
+}
+```
+* Include `fstream`
+* Declaring an `ifstream` variable
+* Open a stream to a file (`open()`)
+* Check for failure to open
+* Loop through the file (`eof()`) and do stuff
+* Close the stream (`close()`)
+
+### 3 Parsing Strings
 Assuming you've done [6.08] you know the basics of string manipulation.
 If you haven't got the concept, return to [6.08] and study again.
 
