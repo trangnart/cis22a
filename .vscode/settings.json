@@ -78,7 +78,8 @@
         "cout",
         "cstdlib",
         "setprecision",
-        "srand"
+        "srand",
+        "stoi"
     ],
     "cSpell.ignoreWords": [
         "ttyl"
