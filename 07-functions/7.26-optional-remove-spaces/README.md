@@ -17,7 +17,7 @@ Your program must define and call the following function.
 The function should return a string representing the input string without spaces.
 
 #### `RemoveSpaces()`
-```
+```cpp
 string RemoveSpaces(string userString);
 ```
 
@@ -44,7 +44,7 @@ You probably have to worry about multiple spaces though.
 
 ## Functions
 ### `replace()`
-```
+```cpp
 string& replace(size_t pos, size_t len, const string& str);
 ```
 Replace the content of a string at `pos` to the `len` with a new `str`.
@@ -57,7 +57,7 @@ s.replace(pos, 4, "bad");
 ```
 
 ### `erase()`
-```
+```cpp
 string& erase(size_t pos = 0, size_t len = npos);
 ```
 Erases from `pos` to `len` and reduce the string size.
