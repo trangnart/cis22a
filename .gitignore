@@ -1,4 +1,5 @@
 *.dSYM*
 *.out
 *.exe
+*.temp
 quizes/primes.txt
