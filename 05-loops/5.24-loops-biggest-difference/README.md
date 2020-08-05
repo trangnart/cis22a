@@ -28,7 +28,7 @@ since no previous number exists.
 
 ### `abs()`
 ```
-int bas(int x);
+int abs(int x);
 long abs(long x);
 long long abs(long long x);
 ```
