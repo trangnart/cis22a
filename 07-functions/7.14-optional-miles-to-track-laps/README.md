@@ -18,6 +18,6 @@ Input | Output
 
 ## Function Prototype
 Your program must define and call a function:
-```
+```cpp
 double MilesToLaps(double userMiles);
 ```

@@ -5,6 +5,23 @@ Ex: If `x = 5`, `y = 2`, and `z = 7`,
 after the call `Ascend3(x, y, z)`,
 the new values will be `x = 2`, `y = 5`, and `z = 7`.
 
+## Example
+### Input
+```
+4 1 2
+```
+
+### Output
+```
+1 2 4
+```
+
+## Function Prototypes
+```cpp
+void Ascend3(int x, int y, int z);
+void Ascend3(vector<int>& array);
+```
+
 ## Hints
 * Don't forget to declare `Ascend3`'s parameters as pass-by-reference (using `&`).
 Otherwise, the function won't be able to change the values of the passed arguments.
@@ -27,3 +44,19 @@ because you'll overwrite a value that is still needed.
 So just set the `x` parameter with `lowVal`, `y` with `midVal`, and `z` with `highVal`.
 * Be aware that two values could be equal.
 So use `<=` rather than `<` in your comparisons.
+
+### `sort()`
+You can use built-in `sort()` function to sort a vector:
+```cpp
+#include <algorithm>
+#include <vector>
+
+void main() {
+  vector<int> v = { 4, 2, 3 };
+  sort(v.begin(), v.end());
+  for (auto n : v) {
+    cout << n << " ";
+  }
+  cout << endl;
+}
+```

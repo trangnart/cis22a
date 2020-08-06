@@ -1,7 +1,7 @@
 # 7.16 LAB: Flip a coin
 Write a program that simulates flipping a coin to make decisions.
 The input is how many decisions are needed,
-and the output is either heads or tails.
+and the output is either `heads` or `tails`.
 Assume the input is a value greater than `0`.
 
 ## Example
@@ -14,7 +14,7 @@ Assume the input is a value greater than `0`.
 ```
 heads
 tails
-heads
+tails
 ```
 
 For reproducibility needed for auto-grading, seed the program with a value of `2`.
@@ -29,6 +29,6 @@ at the start of the program, after which `rand()` can be called any number of ti
 
 ## Function Prototype
 Your program must define and call the following function that returns "heads" or "tails".
-```
+```cpp
 string HeadsOrTails();
 ```

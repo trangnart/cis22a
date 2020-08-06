@@ -5,10 +5,27 @@ Rotate means to shift each item to the item on the right,
 with the rightmost item rotating around to become the leftmost item.
 If initial values are `2 4 6`, final values are `6 2 4`.
 
+## Examples
+### Input
+```
+2 4 6
+```
+
+### Output
+```
+6 2 4
+```
+
+## Function Prototype
+You must define the parameters correctly.
+```cpp
+void RotateRight(...);
+```
+
 ## Hints
 * Declare the function's three parameters as reference type.
-Function return type is void.
-* Use a tmp variable in the function (similar to when swapping two variables).
+Function return type is `void`.
+* Use a `tmp` variable in the function (similar to when swapping two variables).
 Your first assignment statement in the function should be assigning `tmp`
 with one of the three parameter's value.
 * Be careful not to overwrite a value that you expect to use.

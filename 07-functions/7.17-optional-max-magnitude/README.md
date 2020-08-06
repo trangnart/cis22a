@@ -17,7 +17,7 @@ Though not necessary, you may use the absolute-value built-in math function.
 
 ## Function Prototype
 Your program must define and call a function:
-```
+```cpp
 int MaxMagnitude(int userVal1, int userVal2);
 ```
 

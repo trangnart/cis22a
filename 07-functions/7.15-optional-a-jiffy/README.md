@@ -14,7 +14,6 @@ Input | Output
 --- | ---
 `15` | `1500.00`
 
-
 ## Function Prototype
 Your program must define and call a function:
 ```
