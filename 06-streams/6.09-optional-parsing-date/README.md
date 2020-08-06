@@ -34,6 +34,9 @@ I'll let you use my `split()` function in Section [4.24] instead of
 doing your own space-finding.
 Figure out how to use it :)
 
+You can also use `stringstream` to do this easier.
+See [ex-stringstream.cpp] to learn how use it.
+
 ---
 ## Concepts
 
@@ -41,7 +44,7 @@ Figure out how to use it :)
 Learn how to read a file by studying [ex-read-file.cpp].
 
 #### 1.1 Dump out content
-* Create a file call 'example-data.temp'
+* Create a file call `example-data.temp`
 * Add random lines of text to the file
 * Add `-1` on a line by itself to the file
 * Run [ex-read-file.cpp] and check the results
@@ -54,7 +57,7 @@ Create your version of [ex-read-file.cpp]
 * Do not print out `-1` but `break` out of the loop
 
 #### 1.4 Read the `dates.txt` file
-* Modify your program to read dates.txt instead
+* Modify your program to read `dates.txt` instead
 
 Congratulations! Use this to write your solution.
 
@@ -92,4 +95,5 @@ If you haven't got the concept, return to [6.08] and study again.
 
 [4.24]: ../../04-branches/4.24-optional-name-format/paul-solution.cpp
 [6.08]: ../6.08-optional-parsing-strings/README.md
+[ex-stringstream.cpp]: ../6.10-data-visualization-streams/ex-stringstream.cpp
 [ex-read-file.cpp]: ex-read-file.cpp

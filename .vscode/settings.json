@@ -77,9 +77,14 @@
     "cSpell.words": [
         "cout",
         "cstdlib",
+        "fstream",
+        "getline",
+        "ofstream",
         "setprecision",
+        "setw",
         "srand",
         "stoi",
+        "stringstream",
         "substr"
     ],
     "cSpell.ignoreWords": [
