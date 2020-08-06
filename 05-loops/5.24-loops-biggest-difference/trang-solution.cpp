@@ -11,7 +11,7 @@ int main() {
     for (int i = 0; i < sizeList; ++i) {
         cin >> currNum;
         if (i > 0) {
-        testDiff = abs(currNum - prevNum);
+            testDiff = abs(currNum - prevNum);
             if (testDiff > maxDiff) {
                 maxDiff = testDiff;
             }
