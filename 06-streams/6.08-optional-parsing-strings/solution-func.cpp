@@ -7,7 +7,7 @@ string get_right(string line);
 string get_left(string line);
 
 int main() {
-    string name, first, last;
+    string name;
 
     do {
         cout << "Enter input string:\n";
