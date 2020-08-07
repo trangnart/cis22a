@@ -89,5 +89,6 @@
     ],
     "cSpell.ignoreWords": [
         "ttyl"
-    ]
+    ],
+    "workbench.sideBar.location": "right"
 }
