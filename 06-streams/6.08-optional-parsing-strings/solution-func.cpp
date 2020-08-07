@@ -2,9 +2,9 @@
 #include <string>
 using namespace std;
 
-string trim(string line);
-string get_right(string line);
-string get_left(string line);
+string trim(const string& line);
+string get_right(const string& line);
+string get_left(const string& line);
 
 int main() {
     string name;
@@ -24,7 +24,7 @@ int main() {
     return 0;
 }
 
-string get_right(string line) {
+string get_right(const string& line) {
     size_t pos = line.find(',');
     if (pos == string::npos) {
         return "";
@@ -32,7 +32,7 @@ string get_right(string line) {
     return trim(line.substr(pos+1, line.length() - pos - 1));
 }
 
-string get_left(string line) {
+string get_left(const string& line) {
     size_t pos = line.find(',');
     if (pos == string::npos) {
         return "";
@@ -40,7 +40,7 @@ string get_left(string line) {
     return trim(line.substr(0, pos));
 }
 
-string trim(string line) {
+string trim(const string& line) {
     //         012345678
     // line = "***JANE**"
     // beg=3------^  ^-----end=6
