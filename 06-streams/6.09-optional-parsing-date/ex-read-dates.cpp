@@ -1,23 +1,44 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 int day(string date);
 int month(string date);
 int year(string date);
 
-
 int main() {
+    const string FILENAME = "dates.txt";
+    ifstream inFS;
     string date;
 
-    getline(cin, date);
-    size_t pos = date.find(',');
-    if (pos != string::npos) {
-        if (month(date) != 0 && (day(date) > 0 && day(date) < 32) && year(date) != 0) {
-            cout << month(date) <<  "/" << day(date) << "/" << year(date)
-                 << endl;
+    inFS.open(FILENAME);
+
+    if (!inFS.is_open()) {
+        cout << "Cannot open " << FILENAME << endl;
+        return 1;
+    }
+
+    while (!inFS.eof()) {
+        getline(inFS, date);
+
+        if (inFS.fail() || date == "-1") {
+            break;
+        }
+
+        size_t pos = date.find(',');
+        if (pos == string::npos || date == "-1") {
+            continue;
+        }
+        
+        if (pos != string::npos) {
+            if (month(date) != 0 && (day(date) > 0 && day(date) < 32) && year(date) != 0) {
+                cout << month(date) <<  "/" << day(date) << "/" << year(date)
+                     << endl;
+            }
         }
     }
+    inFS.close();
 
     return 0;
 }
