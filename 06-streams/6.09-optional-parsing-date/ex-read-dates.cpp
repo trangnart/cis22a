@@ -94,6 +94,7 @@ int DateParser(string month) {
     return monthInt;
 }
 
+
 int year(string date) {
     size_t pos = date.find(',');
 
