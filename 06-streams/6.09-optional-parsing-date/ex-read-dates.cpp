@@ -6,12 +6,12 @@ using namespace std;
 int day(string date);
 int DateParser(string month);
 int year(string date);
+int month(string date);
 
 int main() {
     const string FILENAME = "dates.txt";
     ifstream inFS;
     string date = "";
-    string month;
 
     inFS.open(FILENAME);
 
@@ -33,10 +33,10 @@ int main() {
         }
 
         if (pos != string::npos) {
-            int mm = DateParser(month);
+            int mm = month(date);
             int dd = day(date);
             int yy = year(date);
-
+            
             if (dd && mm && yy) {
                 cout << mm <<  "/" << dd << "/" << yy << endl;
             }
@@ -59,9 +59,18 @@ int day(string date) {
     if (dd > 0 && dd < 32) {
         return dd;
     }
-    else {
-        return 0;
+    return 0;
+}
+
+int month(string date) {
+    size_t pos = date.find(' ');
+    if (pos == string::npos) {
+        return 1;
     }
+
+    string month = date.substr(0, pos);
+    int mm = DateParser(month);
+    return mm;
 }
 
 int DateParser(string month) {
@@ -93,7 +102,6 @@ int DateParser(string month) {
         monthInt = 12;
     return monthInt;
 }
-
 
 int year(string date) {
     size_t pos = date.find(',');
