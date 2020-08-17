@@ -203,4 +203,4 @@ See [ex-setw-setfill.cpp] for usage and examples.
 [ex-write-file.cpp]: ../6.10-data-visualization-streams/ex-write-file.cpp
 [ex-stringstream.cpp]: ../6.10-data-visualization-streams/ex-stringstream.cpp
 [ex-setw-setfill.cpp]: ../6.10-data-visualization-streams/ex-setw-setfill.cpp
-[ex-name-age.cpp]: ../6.10-data-visualization-streams/ex-name-age.cpp
+[ex-split-name-age.cpp]: ../6.10-data-visualization-streams/ex-name-age.cpp
