@@ -25,23 +25,22 @@ int main() {
 }
 void OutputGraph(const string& filename) {
     string line;
+    int count = 0;
     ifstream inFS;
-
     inFS.open(filename);
     if (!inFS.is_open()) {
         return;
     }
     while (!inFS.eof()) {
         getline(inFS, line);
-
-        if (inFS.fail()) {
-            continue;
+        if (!inFS.fail() && count > 1) {
+            cout << setfill(' ') << setw(20) << right << get_name(line) << " ";
+            for (int i = 0; i < get_number(line); ++i) {
+                cout << "*";
+            }
+            cout << endl;
         }
-        cout << setw(20) << right << get_name(line) << " ";
-        for (int i = 0; i < get_number(line); ++i) {
-            cout << "*";
-        }
-        cout << endl;
+        ++count;
     }
     inFS.close();
     return;
@@ -139,5 +138,5 @@ int get_number(const string& line) {
 }
 bool file_exists(const string& name) {
     ifstream f(name);
-    return f.good();       
+    return f.good();
 }
