@@ -14,16 +14,11 @@ int main() {
     }
    return 0;
 }
-string HeadsOrTails() {
-    int  random;
-    string ht;
-    random = rand() % 2;
 
-    if (random == 1) {
-        ht = "heads";
+string HeadsOrTails() {
+    if (rand() % 2) {
+        return "heads";
     }
-    else {
-        ht = "tails";
-    }
-    return ht;
+
+    return "tails";
 }
