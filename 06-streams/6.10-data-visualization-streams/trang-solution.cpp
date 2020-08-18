@@ -35,10 +35,7 @@ void OutputGraph(const string& filename) {
         getline(inFS, line);
         if (!inFS.fail() && count > 1) {
             cout << setfill(' ') << setw(20) << right << get_name(line) << " ";
-            for (int i = 0; i < get_number(line); ++i) {
-                cout << "*";
-            }
-            cout << endl;
+            cout << setfill('*') << setw(get_number(line)) << "" << endl;
         }
         ++count;
     }
@@ -76,12 +73,12 @@ void OutputTable(const string& filename) {
 }
 int CollectInputData(const string& filename) {
     ofstream outFS;
-    string title, header1, header2, data_pt, data_str, data_int;
+    string title, header1, header2, data_pt, line;
     int count = 0;
 
-    outFS.open("novels.txt");
+    outFS.open(filename);
     if (!outFS.is_open()) {
-        cout << "Cannot open";
+        cout << "Cannot open novels.txt" << endl;
         return 1;
     }
     cout << "Enter a title for the data:" << endl;
@@ -102,13 +99,10 @@ int CollectInputData(const string& filename) {
     while (data_pt != "-1") {
         cout << "Enter a data point (-1 to stop input):" << endl;
         getline(cin, data_pt);
-
+        // James Th, 6
         if (data_pt != "-1") {
-            size_t pos = data_pt.find(",");
-            data_str = data_pt.substr(0,pos);
-            cout << "Data string: " << data_str << endl;
-            data_int = data_pt.substr(pos+1);
-            cout << "Data integer:" << data_int << endl;
+            cout << "Data string: " << get_name(data_pt) << endl;
+            cout << "Data integer :" << get_number(data_pt) << endl;
             outFS << data_pt << endl;
 
             ++count;
@@ -118,23 +112,21 @@ int CollectInputData(const string& filename) {
     return count;
 }
 string get_name(const string& line) {
-    string name;
     size_t pos = line.find(",");
     if (pos == string::npos) {
         return "";
     }
-    name = line.substr(0,pos);
 
-    return name;
+    return line.substr(0,pos);
 }
 int get_number(const string& line) {
     size_t pos = line.find(",");
     if (pos == string::npos) {
         return -1;
     }
-    string integer = line.substr(pos+1);
+    string num = line.substr(pos+1);
 
-    return stoi(integer);
+    return stoi(num);
 }
 bool file_exists(const string& name) {
     ifstream f(name);

@@ -1,23 +1,48 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 int day(string date);
-int month(string date);
+int DateParser(string month);
 int year(string date);
-
+int month(string date);
 
 int main() {
-    string date;
+    const string FILENAME = "dates.txt";
+    ifstream inFS;
+    string date = "";
 
-    getline(cin, date);
-    size_t pos = date.find(',');
-    if (pos != string::npos) {
-        if (month(date) != 0 && (day(date) > 0 && day(date) < 32) && year(date) != 0) {
-            cout << month(date) <<  "/" << day(date) << "/" << year(date)
-                 << endl;
+    inFS.open(FILENAME);
+
+    if (!inFS.is_open()) {
+        cout << "Cannot open " << FILENAME << endl;
+        return 1;
+    }
+
+    while (!inFS.eof() && date != "-1") {
+        getline(inFS, date);
+
+        if (inFS.fail()) {
+            continue;
+        }
+
+        size_t pos = date.find(',');
+        if (pos == string::npos) {
+            continue;
+        }
+
+        if (pos != string::npos) {
+            int mm = month(date);
+            int dd = day(date);
+            int yy = year(date);
+
+            if (dd && mm && yy) {
+                cout << mm <<  "/" << dd << "/" << yy << endl;
+            }
         }
     }
+    inFS.close();
 
     return 0;
 }
@@ -29,7 +54,12 @@ int day(string date) {
         return 0;
     }
     string day = date.substr(pos);
-    return stoi(day);
+
+    int dd = stoi(day);
+    if (dd > 0 && dd < 32) {
+        return dd;
+    }
+    return 0;
 }
 
 int month(string date) {
@@ -37,32 +67,38 @@ int month(string date) {
     if (pos == string::npos) {
         return 1;
     }
-    string get_month = date.substr(0, pos);
+
+    string month = date.substr(0, pos);
+    int mm = DateParser(month);
+    return mm;
+}
+
+int DateParser(string month) {
     int monthInt = 0;
 
-    if (get_month == "January")
+    if (month == "January")
         monthInt = 1;
-    else if (get_month == "February")
+    else if (month == "February")
         monthInt = 2;
-    else if (get_month == "March")
+    else if (month == "March")
         monthInt = 3;
-    else if (get_month == "April")
+    else if (month == "April")
         monthInt = 4;
-    else if (get_month == "May")
+    else if (month == "May")
         monthInt = 5;
-    else if (get_month == "June")
+    else if (month == "June")
         monthInt = 6;
-    else if (get_month == "July")
+    else if (month == "July")
         monthInt = 7;
-    else if (get_month == "August")
+    else if (month == "August")
         monthInt = 8;
-    else if (get_month == "September")
+    else if (month == "September")
         monthInt = 9;
-    else if (get_month == "October")
+    else if (month == "October")
         monthInt = 10;
-    else if (get_month == "November")
+    else if (month == "November")
         monthInt = 11;
-    else if (get_month == "December")
+    else if (month == "December")
         monthInt = 12;
     return monthInt;
 }
@@ -74,5 +110,6 @@ int year(string date) {
         return 0;
     }
     string year = date.substr(pos+1);
-    return stoi(year);
+    int yy = stoi(year);
+    return yy;
 }
