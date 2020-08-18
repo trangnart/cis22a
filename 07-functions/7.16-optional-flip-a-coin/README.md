@@ -32,3 +32,49 @@ Your program must define and call the following function that returns "heads" or
 ```cpp
 string HeadsOrTails();
 ```
+
+---
+# Functions
+## `rand()`
+`rand()` returns a random number between 0 and `RAND_MAX`
+(`RAND_MAX` is a very large number defined by the system).
+
+### Examples
+```cpp
+v1 = rand() % 100;         // v1 in the range 0 to 99
+v2 = rand() % 100 + 1;     // v2 in the range 1 to 100
+v3 = rand() % 30 + 1985;   // v3 in the range 1985-2014
+```
+
+## `srand()`
+`srand()` is a random number initializer
+(a seed which changes the order of the _random_ number sequence).
+
+### Examples
+```cpp
+srand(2);
+cout << rand() % 4 << end;
+cout << rand() % 4 << end;
+cout << rand() % 4 << end;
+```
+
+It will _always_ return:
+```
+1
+0
+2
+```
+Regardless of how many times you run your program.
+
+If you change your program to:
+```cpp
+srand(2);
+cout << rand() % 4 << end;
+srand(2);
+cout << rand() % 4 << end;
+srand(2);
+cout << rand() % 4 << end;
+```
+
+It will always return `1`.
+Because `srand(2)` initializes the sequence to `1`, `0`, `2`, etc.
