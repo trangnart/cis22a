@@ -15,13 +15,15 @@ int main() {
    return 0;
 }
 string HeadsOrTails() {
-    int  ht;
-    ht = rand() % 2;
-    
-    if (ht == 0) {
-        return "heads";
+    int  random;
+    string ht;
+    random = rand() % 2;
+
+    if (random == 1) {
+        ht = "heads";
     }
     else {
-        return "tails";
+        ht = "tails";
     }
+    return ht;
 }

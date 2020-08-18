@@ -19,11 +19,13 @@ int main() {
 int MaxMagnitude(int userVal1, int userVal2) {
     int a = abs(userVal1);
     int b = abs(userVal2);
+    int c;
 
     if (a > b) {
-        return a;
+        c = a;
     }
     else {
-        return b;
+        c = b;
     }
+    return c;
 }
