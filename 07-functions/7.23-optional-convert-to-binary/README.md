@@ -58,14 +58,16 @@ This is a lab from a [5.15] that now requires the use of a function.
 
 ## Hints `dlroWolleH`
 The fastest way to reverse the string is to swap the values at both ends:
+
 Itr | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-- | d | l | r | o | W | o | l | l | e | H
+ | d | l | r | o | W | o | l | l | e | H
 0 | `H` | l | r | o | W | o | l | l | e | `d`
 1 | H | `e` | r | o | W | o | l | l | `l` | d
 2 | H | e | `l` | o | W | o | l | `r` | l | d
 3 | H | e | l | `l` | W | o | `o` | r | l | d
 4 | H | e | l | l | `o` | `w` | o | r | l | d
+
 
 * Half way index mark is `10 / 2 - 1 = 4`.
 * Write a loop that goes from begin to half way
