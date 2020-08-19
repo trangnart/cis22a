@@ -1,0 +1,12 @@
+sit 5
+sit 11
+run 3
+swim 8
+run 69
+bike 3
+sit 21
+bike 22
+walk 1
+walk 0
+bike 220
+walk 2
