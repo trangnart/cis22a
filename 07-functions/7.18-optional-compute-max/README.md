@@ -19,3 +19,7 @@ If you use vector, call `MaxFive(numbers)` returns `5`.
 * Don't forget to return `maxFound`.
 
 If you'd like you can use vector to make this simpler.
+See [ex-input-to-vector.cpp] and [ex-push-to-vector.cpp] for examples.
+
+[ex-input-to-vector.cpp]: ../../10-arrays-and-vectors/10.16-optional-even-ood-values/ex-input-to-vector.cpp
+[ex-push-to-vector.cpp]: ../../10-arrays-and-vectors/10.16-optional-even-ood-values/ex-push-to-vector.cpp
