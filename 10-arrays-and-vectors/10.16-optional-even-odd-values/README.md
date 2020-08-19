@@ -29,5 +29,5 @@ Look at [ex-input-to-vector.cpp] for the traditional way of inserting
 and looping through vector.
 [ex-push-to-vector.cpp] is an alternative, probably easier way of using vector.
 
-[ex-input-to-vector.cpp]: ../../10-arrays-and-vectors/10.16-optional-even-ood-values/ex-input-to-vector.cpp
-[ex-push-to-vector.cpp]: ../../10-arrays-and-vectors/10.16-optional-even-ood-values/ex-push-to-vector.cpp
+[ex-input-to-vector.cpp]: ../../10-arrays-and-vectors/10.16-optional-even-odd-values/ex-input-to-vector.cpp
+[ex-push-to-vector.cpp]: ../../10-arrays-and-vectors/10.16-optional-even-odd-values/ex-push-to-vector.cpp
