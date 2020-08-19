@@ -48,15 +48,16 @@ So use `<=` rather than `<` in your comparisons.
 ### `sort()`
 You can use built-in `sort()` function to sort a vector:
 ```cpp
+#include <iostream>
 #include <algorithm>
 #include <vector>
-
-void main() {
-  vector<int> v = { 4, 2, 3 };
-  sort(v.begin(), v.end());
-  for (auto n : v) {
-    cout << n << " ";
-  }
-  cout << endl;
+using namespace std;
+int main() {
+    vector<int> v = {4, 2, 3};
+    sort(v.begin(), v.end());
+    for (int i=0; i < v.size(); ++i) {
+       cout << v[i] << " ";
+    }
+    cout << endl;
 }
 ```
