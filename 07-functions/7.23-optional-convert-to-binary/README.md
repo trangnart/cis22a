@@ -61,7 +61,7 @@ The fastest way to reverse the string is to swap the values at both ends:
 
 Itr | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
- | d | l | r | o | W | o | l | l | e | H
+` ` | d | l | r | o | W | o | l | l | e | H
 0 | `H` | l | r | o | W | o | l | l | e | `d`
 1 | H | `e` | r | o | W | o | l | l | `l` | d
 2 | H | e | `l` | o | W | o | l | `r` | l | d
