@@ -1,18 +1,31 @@
 #include <iostream>
-#include <cstdlib>
+#include <string>
+#include <fstream>
+
 using namespace std;
 
-/* Type your code here */ 
+bool FirstRectangleSmaller(int, int, int, int, int, int, int, int);
+void CompareRectangles(const string &);
 
+int main()
+{
+    // const string FILENAME = "input.txt";
 
-int main() {
-   int r1xul, r1yul, r1xbr, r1ybr; // x upper-left, y upper-left, x bottom-right, y bottom-right
-   int r2xul, r2yul, r2xbr, r2ybr;
-   
-   cin >> r1xul; cin >> r1yul; cin >> r1xbr; cin >> r1ybr;
-   cin >> r2xul; cin >> r2yul; cin >> r2xbr; cin >> r2ybr;
+    cout << FirstRectangleSmaller(1,1,2,3,0,0,10,10) << endl;
+    cout << FirstRectangleSmaller(0,0,10,10,-12,-12,-1,-1) << endl;
 
-   cout << FirstRectangleSmaller(r1xul, r1yul, r1xbr, r1ybr, r2xul, r2yul, r2xbr, r2ybr) << endl;
+    // CompareRectangles(FILENAME);
 
-   return 0;
+    return 0;
+}
+
+bool FirstRectangleSmaller(int r1xul, int r1yul, int r1xbr, int r1ybr,
+                           int r2xul, int r2yul, int r2xbr, int r2ybr)
+{
+    // implement this first
+}
+
+void CompareRectangles(const string &filename)
+{
+    // afterwards work on this
 }
