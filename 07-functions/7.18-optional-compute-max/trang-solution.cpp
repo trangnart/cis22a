@@ -7,8 +7,8 @@ int MaxFive(vector<int>& numbers );
 int main() {
     vector<int> numbers(5);
 
-    for (size_t i=0; i < numbers.size(); ++i) {
-        cin >> numbers[i];
+    for (auto& i : numbers) {
+        cin >> i;
     }
     cout << MaxFive(numbers) << endl;
 
