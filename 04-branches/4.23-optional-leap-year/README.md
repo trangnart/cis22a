@@ -12,22 +12,11 @@ Some example leap years are 1600, 1712, and 2016.
 
 Write a program that takes in a year and determines whether that year is a leap year.
 
-Ex: If the input is:
-```
-1712
-```
-the output is:
-```
-1712 - leap year
-```
-Ex: If the input is:
-```
-1913
-```
-the output is:
-```
-1913 - not a leap year
-```
+## Input/Output
+Input | Output
+--- | ---
+`1712` | `1712 is a leap year.`
+`1913` | `1913 is not a leap year.`
 
 ## Hint
 To determine if a year is a _century year_ modulo it by `100`.

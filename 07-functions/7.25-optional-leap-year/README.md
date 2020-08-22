@@ -1,31 +1,110 @@
 # 7.25 LAB: Leap year - functions
-A year in the modern Gregorian Calendar consists of 365 days. In reality, the earth takes longer to rotate around the sun. To account for the difference in time, every 4 years, a leap year takes place. A leap year is when a year has 366 days: An extra day, February 29th. The requirements for a given year to be a leap year are:
+This is a lab from a previous chapter [4.23]
+that now requires the use of functions, streams and vector.
 
-1) The year must be divisible by 4
+## Parts
+### Part 1: Implement `IsLeapYear()` Function
+Convert [4.23] lab to a function and only return a `bool` instead of `cout`.
 
-2) If the year is a century year (1700, 1800, etc.), the year must be evenly divisible by 400
+This part of the lab you can hard-code the years so you can check quickly if
+the function is correct.
+```cpp
+cout << IsLeapYear(2020) << endl;
+```
 
-Some example leap years are 1600, 1712, and 2016.
+### Part 2: Read `input.txt` File
+Implement `ReadYears()` function to read in the `input.txt` file and return
+the `vector<int>` that has all the years.
 
-Write a program that takes in a year and determines whether that year is a leap year.
+The `main()` already given you the `cout` facility to check if your program
+is working correctly.
 
-Ex: If the input is:
-```
-1712
-```
-the output is:
-```
-1712 is a leap year. 
-```
-Ex: If the input is:
-```
-1913
-```
-the output is:
-```
-1913 is not a leap year.
-```
-Your program must define and call the following function. The function should return true if the input year is a leap year and false otherwise.
-`bool IsLeapYear(int userYear)`
+### Part 3: Remove Non-Leap Years from the Vector
+Implement `RemoveNonLeapYears()` that will use `IsLeapYear()` function
+and determine if you should remove the year.
 
-Note: This is a lab from a previous chapter that now requires the use of a function.
+#### `erase()`
+You will need to use `erase()` to remove an element from a vector.
+Here's an example how to use it.
+```cpp
+void RemoveOddYears(vector<int>& years) {
+    vector<int>::iterator year = years.begin();
+    do {
+        if (*year % 2 == 1) {
+            years.erase(year);
+        } else {
+            year++;
+        }
+    } while (year != years.end());
+}
+```
+You're using an **iterator** (`year`)
+to go through every element in the `vector`.
+For example, you have a `vector`:
+```cpp
+vector<int> years = { 2018, 2019, 2020, 2021 };
+```
+`years.begin()` will return an _iterator_ `year` (not the element) pointing
+to `2018`. To return a value you must add a `*` to make `*year` otherwise,
+it will return an _iterator_ not a _value_.
+
+Since `2018` is an even year, it will get into the `else` statement which
+advances the iterator forward to year `2019`.
+
+Function `erase(iterator)` requires an _iterator_ as an argument.
+Because year `2019` is odd, calling:
+```cpp
+year.erase(year);
+```
+Removes the element from the vector `years` therefore, you don't need to
+increment the iterator, that element is now gone.
+
+The result when you print out the `vector`:
+```
+2018
+2020
+```
+
+## Function Prototypes
+```cpp
+bool IsLeapYear(int userYear)
+vector<int> ReadYears(const string& filename);
+void RemoveNonLeapYears(vector<int>& years);
+```
+
+## Output
+Your output must match this:
+```
+1904
+1908
+1912
+1916
+1920
+1924
+1928
+1932
+1936
+1940
+1944
+1948
+1952
+1956
+1960
+1964
+1968
+1972
+1976
+1980
+1984
+1988
+1992
+1996
+2000
+2004
+2008
+2012
+2016
+2020
+```
+
+[4.23]: ../../04-branches/4.23-optional-leap-year/README.md
