@@ -2,29 +2,30 @@
 #include <vector>
 using namespace std;
 
-void RotateRight(vector<int>& rotate);
+void RotateRight(vector<int>& rotation);
 
 int main() {
-    vector<int> rotate(3);
+    vector<int> rotation(3);
 
-    for (auto& i : rotate) {
-        cin >> i;
+    for (auto& num : rotation) {
+        cin >> num;
     }
 
-    RotateRight(rotate);
+    RotateRight(rotation);
 
     return 0;
 }
 
-void RotateRight(vector<int>& rotate) {
-    int tmp = rotate[rotate.size() -1];
+void RotateRight(vector<int>& rotation) {
+    int last_element = rotation.size() -1;
+    int tmp = rotation[last_element];
 
-    for (int i = rotate.size()-1; i > 0; --i) {
-        rotate[i] = rotate[i-1];
+    for (int i = last_element; i > 0; --i) {
+        rotation[i] = rotation[i-1];
     }
-    rotate[0]= tmp;
+    rotation[0]= tmp;
 
-    for (auto& i : rotate) {
+    for (auto& i : rotation) {
         cout << i << " ";
     }
     cout << endl;
