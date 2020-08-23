@@ -17,24 +17,22 @@ int main() {
 }
 
 double ActivityCalories(string activity, int min) {
-    double num;
-
     if (activity == "sit") {
-        num = min * 1.4;
+        return min * 1.4;
     }
     if (activity == "walk") {
-        num = min * 5.4;
+        return min * 5.4;
     }
     if (activity == "run") {
-        num = min * 13.0;
+        return min * 13.0;
     }
     if (activity == "bike") {
-        num = min * 6.8;
+        return min * 6.8;
     }
     if (activity == "swim") {
-        num = min * 8.7;
+        return min * 8.7;
     }
-    return num;
+    return 0.0;
 }
 
 void CalculateCaloriesUserInput() {
@@ -66,8 +64,9 @@ void CalculateCaloriesFromFile(const string &filename) {
             continue;
         }
         cout << setprecision(1) << fixed;
-        cout << activity << " " << "for " << min << " minutes burns "
-             << ActivityCalories(activity, min) << " calories" << endl;
     }
+    cout << activity << " " << "for " << min << " minutes burns "
+         << ActivityCalories(activity, min) << " calories" << endl;
+
     inFS.close();
 }
