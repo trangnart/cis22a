@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
-/* Define your function here */ 
+/* Define your function here */
 
-int main() {
-   /* Type your code here. Your code must call the function.  */
+int main()
+{
+    /* Type your code here. Your code must call the function.  */
 
-   return 0;
+    return 0;
 }
