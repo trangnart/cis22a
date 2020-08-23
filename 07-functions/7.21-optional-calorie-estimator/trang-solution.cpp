@@ -13,9 +13,8 @@ int main() {
     string activity;
     const string FILENAME = "input.txt";
 
-    CalculateCaloriesFromFile(FILENAME);
-    CalculateCaloriesUserInput();
     ActivityCalories(activity, min);
+    CalculateCaloriesFromFile(FILENAME);
 
    return 0;
 }
@@ -62,8 +61,8 @@ void CalculateCaloriesFromFile(const string &filename) {
     }
 
     while (!inFS.eof()) {
-        cin >> activity;
-        cin >> min;
+        inFS >> activity;
+        inFS >> min;
         cout << activity << " " << "for " << min << " minutes burns "
              << ActivityCalories(activity, min) << " calories" << endl;
 
