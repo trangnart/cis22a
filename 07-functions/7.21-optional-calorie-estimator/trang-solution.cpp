@@ -55,7 +55,8 @@ void CalculateCaloriesFromFile(const string &filename) {
     if (!inFS.is_open()) {
         cout << "Cannot open " << filename << endl;
     }
-
+    cout << setprecision(1) << fixed;
+    
     while (!inFS.eof()) {
         inFS >> activity;
         inFS >> min;
@@ -63,10 +64,10 @@ void CalculateCaloriesFromFile(const string &filename) {
         if (inFS.fail()) {
             continue;
         }
-        cout << setprecision(1) << fixed;
+        cout << activity << " " << "for " << min << " minutes burns "
+             << ActivityCalories(activity, min) << " calories" << endl;
     }
-    cout << activity << " " << "for " << min << " minutes burns "
-         << ActivityCalories(activity, min) << " calories" << endl;
+
 
     inFS.close();
 }
