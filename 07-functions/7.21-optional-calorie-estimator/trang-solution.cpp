@@ -9,20 +9,16 @@ void CalculateCaloriesUserInput();
 void CalculateCaloriesFromFile(const string &filename);
 
 int main() {
-    int min;
-    string activity;
     const string FILENAME = "input.txt";
 
-    ActivityCalories(activity, min);
     CalculateCaloriesFromFile(FILENAME);
 
-   return 0;
+    return 0;
 }
 
 double ActivityCalories(string activity, int min) {
-  double num;
+    double num;
 
-  cout << setprecision(1) << fixed;
     if (activity == "sit") {
         num = min * 1.4;
     }
@@ -47,6 +43,8 @@ void CalculateCaloriesUserInput() {
 
     cin >> userActivity;
     cin >> userMinutes;
+
+    cout << ActivityCalories(userActivity, userMinutes) << endl;
 }
 
 void CalculateCaloriesFromFile(const string &filename) {
@@ -63,12 +61,13 @@ void CalculateCaloriesFromFile(const string &filename) {
     while (!inFS.eof()) {
         inFS >> activity;
         inFS >> min;
-        cout << activity << " " << "for " << min << " minutes burns "
-             << ActivityCalories(activity, min) << " calories" << endl;
 
         if (inFS.fail()) {
             continue;
         }
+        cout << setprecision(1) << fixed;
+        cout << activity << " " << "for " << min << " minutes burns "
+             << ActivityCalories(activity, min) << " calories" << endl;
     }
     inFS.close();
 }
