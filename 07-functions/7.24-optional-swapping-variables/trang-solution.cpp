@@ -14,8 +14,8 @@ int main()
 
     SwapValues(numbers);
 
-    for (auto& i : numbers) {
-        cout << i << " ";
+    for (auto num : numbers) {
+        cout << num << " ";
     }
     cout << endl;
 
@@ -23,7 +23,7 @@ int main()
 }
 
 void SwapValues(vector<int>& numbers) {
-        int temp = numbers[0];
-        numbers[0] = numbers[1];
-        numbers[1] = temp;
+    int temp = numbers[0];
+    numbers[0] = numbers[1];
+    numbers[1] = temp;
 }
