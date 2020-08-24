@@ -23,9 +23,7 @@ int main()
 }
 
 void SwapValues(vector<int>& numbers) {
-    for (size_t i = 0; i < numbers.size()-1; ++i) {
         int temp = numbers[0];
         numbers[0] = numbers[1];
         numbers[1] = temp;
-    }
 }
