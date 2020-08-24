@@ -47,7 +47,7 @@ void NumberToBinary(const string& filename) {
             inFS >> num;
 
             if (!inFS.fail()) {
-                cout << num << " -> "
+                cout << setw(10) << num << " -> "
                      << ReverseString(IntegerToReverseBinary(num))
                      << endl;
             }
