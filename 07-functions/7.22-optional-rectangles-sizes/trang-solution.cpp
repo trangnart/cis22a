@@ -26,7 +26,7 @@ bool FirstRectangleSmaller(int r1xul, int r1yul, int r1xbr, int r1ybr,
     if (Area_1 < Area_2) {
         return true;
     }
-        return false;
+    return false;
 }
 
 void CompareRectangles(const string &filename)
@@ -42,16 +42,15 @@ void CompareRectangles(const string &filename)
 
     while (!inFS.eof()) {
         string true_or_false = "false";
-        
+
         inFS >> r1xul >> r1yul >> r1xbr >> r1ybr
              >> r2xul >> r2yul >> r2xbr >> r2ybr;
 
         if (inFS.fail()) {
             continue;
         }
-
         if (FirstRectangleSmaller(r1xul, r1yul, r1xbr, r1ybr,
-                                      r2xul, r2yul, r2xbr, r2ybr)) {
+                                  r2xul, r2yul, r2xbr, r2ybr)) {
             true_or_false = "true";
         }
         cout << "(" << r1xul << "," << r1yul << ") ("
