@@ -92,5 +92,6 @@
     "cSpell.ignoreWords": [
         "ttyl"
     ],
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "editor.fontSize": 18
 }
