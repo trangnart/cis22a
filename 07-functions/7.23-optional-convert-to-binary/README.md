@@ -41,11 +41,11 @@ Read the provided file and output the content that looks like this:
 ```
          6 -> 110
         20 -> 10100
-        12 -> 1010
-        42 -> 100101
-      1020 -> 1111111111
-        23 -> 10101
-       416 -> 110101010
+        12 -> 1100
+        42 -> 101010
+      1020 -> 1111111100
+        23 -> 10111
+       416 -> 110100000
 ```
 The function below has been provided but you must write the `cout`
 statement using `setw(10)`.
