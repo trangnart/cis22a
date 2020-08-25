@@ -1,5 +1,5 @@
 # 7.30 LAB: Step counter
-A pedometer treats walking 2,000 steps as walking 1 mile.
+A pedometer treats walking `2,000` steps as walking `1` mile.
 Write a program whose input is the number of steps,
 and whose output is the miles walked.
 
