@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-int GetNumOfCharacters(const string usrStr);
-string OutputWithoutWhitespace(string usrStr);
+int GetNumOfCharacters(const string& usrStr);
+string OutputWithoutWhitespace(string& usrStr);
 
 int main()
 {
@@ -15,27 +15,27 @@ int main()
 
     cout << endl << "Number of characters: "
          << GetNumOfCharacters(usrStr) << endl;
-         
+
     cout << "String with no whitespace: "
          << OutputWithoutWhitespace(usrStr) << endl;
 
     return 0;
 }
 
-int GetNumOfCharacters(const string usrStr)
+int GetNumOfCharacters(const string& usrStr)
 {
     int count = 0;
 
-    for (auto i = usrStr.begin(); i != usrStr.end(); i++) {
+    for (auto c : usrStr) {
         count++;
     }
     return count;
 }
 
-string OutputWithoutWhitespace(string usrStr)
+string OutputWithoutWhitespace(string& usrStr)
 {
     for (auto i = usrStr.begin(); i != usrStr.end(); ++i) {
-        if (*i == ' ') {
+        if (*i == ' ' || *i == '\t') {
             usrStr.erase(i--);
         }
     }
