@@ -1,5 +1,6 @@
 @echo off
 setlocal
+chcp 65001 >NUL
 
 if "%1"=="init" goto :INIT
 if "%1"=="" (
