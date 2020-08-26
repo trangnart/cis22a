@@ -3,7 +3,7 @@
 * Prompt the user to enter a string of their choosing.
 * Output the string.
 
-Ex:
+### Example
 ```
 Enter a sentence or phrase:
 The only thing we have to fear is fear itself.
@@ -23,10 +23,10 @@ whitespace (spaces, tabs).
 
 Call the `OutputWithoutWhitespace()` function in `main()`.
 
-### Note
+## Note
 A tab is `'\t'`.
 
-Ex:
+### Example
 ```
 Enter a sentence or phrase:
 The only thing we have to fear is fear itself.
