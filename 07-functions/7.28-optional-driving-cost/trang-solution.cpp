@@ -43,11 +43,12 @@ void DrivingRecord(const string& filename) {
 
         while(!inFS.eof()) {
             inFS >> miles >> mpg >> gasPrice;
+            double cost_gas = DrivingCost(miles, mpg, gasPrice);
 
             if (!inFS.fail()) {
                 cout << setw(9) << miles << setw(9) << mpg
                      << setw(9) << gasPrice << setw(9)
-                     << addDollar(DrivingCost(miles, mpg, gasPrice)) << endl;
+                     << addDollar(cost_gas) << endl;
             }
         }
     }
