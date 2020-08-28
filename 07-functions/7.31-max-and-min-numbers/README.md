@@ -73,6 +73,8 @@ It does not return because it will modify the vector itself.
 There's a simple function that you can use to find the largest element in a `vector`.
 This function returns an iterator (not the value).
 ```cpp
+// you could also use:
+// auto max = max_element(v.begin(), v.end());
 vector<int>::iterator max = max_element(v.begin(), v.end());
 cout << "max value is " << *max << endl;
 v.erase(max); // deleting it
