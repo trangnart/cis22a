@@ -37,8 +37,11 @@ void DrivingRecord(const string& filename) {
     if (inFS.is_open()) {
         double miles, mpg, gasPrice;
 
-        cout << setw(9) << "Miles" << setw(9) << "MPG" << setw(9)
-             << "Price" << setw(9) << "Cost" << endl;
+        cout << setw(9) << "Miles"
+             << setw(9) << "MPG"
+             << setw(9) << "Price"
+             << setw(9) << "Cost"
+             << endl;
         cout << fixed << setprecision(2);
 
         while(!inFS.eof()) {
@@ -46,9 +49,11 @@ void DrivingRecord(const string& filename) {
             double cost_gas = DrivingCost(miles, mpg, gasPrice);
 
             if (!inFS.fail()) {
-                cout << setw(9) << miles << setw(9) << mpg
-                     << setw(9) << gasPrice << setw(9)
-                     << addDollar(cost_gas) << endl;
+                cout << setw(9) << miles
+                     << setw(9) << mpg
+                     << setw(9) << gasPrice
+                     << setw(9) << addDollar(cost_gas)
+                     << endl;
             }
         }
     }
