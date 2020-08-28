@@ -31,7 +31,7 @@ void PrintMenuItems() {
          << "f - Find text\n"
          << "r - Replace all !'s\n"
          << "s - Shorten spaces\n"
-         << "q - Quit\n" << endl
+         << "q - Quit\n\n"
          << "Choose an option: ";
 }
 
@@ -53,9 +53,10 @@ void PrintMenu(string usrStr) {
 
         else if (usropt == 'f') {
             string word;
-            
+
             cout << "Enter a word or phrase to be found:\n";
-            cin >> word;
+            cin.ignore();
+            getline(cin, word);
             cout << "\"" << word << "\"" << " instances: "
                  << FindText(usrStr, word) << endl;
         }
@@ -76,8 +77,8 @@ void PrintMenu(string usrStr) {
 int GetNumOfNonWSCharacters(const string& usrStr) {
     int count = 0;
 
-    for (auto i = usrStr.begin(); i != usrStr.end(); ++i) {
-        if (*i != ' ') {
+    for (auto e : usrStr) {
+        if (e != ' ') {
             count++;
         }
     }
@@ -99,13 +100,12 @@ int GetNumOfWords(const string& usrStr) {
 int FindText(const string& usrStr, const string& word) {
     int count = 0;
     size_t pos = 0;
-    size_t start = 0;
 
     do {
-        pos = usrStr.find(word, start);
+        pos = usrStr.find(word, pos);
         if (pos != string::npos) {
             count++;
-            start = pos + word.size();
+            pos += word.size();
         }
     } while (pos != string::npos);
 
@@ -113,13 +113,13 @@ int FindText(const string& usrStr, const string& word) {
 }
 
 void ReplaceExclamation(string& usrStr) {
-    size_t pos;
+    size_t pos = usrStr.find('!', pos);
 
     do {
-        pos = usrStr.find('!');
         if (pos != string::npos) {
             usrStr[pos] = '.';
         }
+        pos = usrStr.find('!', pos + 1);
     } while (pos != string::npos);
 }
 
