@@ -58,7 +58,8 @@ void VehicleCostRecord(const string& filename) {
             inFS >> miles;
 
             if (!inFS.fail()) {
-                cout << setw(9) << miles << " _________ "
+                cout << setw(9) << setfill(' ') << miles << " "
+                     << setw(10) << setfill('_') << " "
                      << CostForMiles(miles)
                      << " \u00A2" << endl;
             }
