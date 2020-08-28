@@ -17,8 +17,7 @@ int main() {
 
     cout << "Enter a sample text:\n\n";
     getline(cin, sampleText);
-    cout << "You entered: " << sampleText << endl
-         << endl;
+    cout << "You entered: " << sampleText << endl << endl;
     PrintMenu(sampleText);
 
     return 0;
@@ -27,7 +26,6 @@ int main() {
 void PrintMenu(string sampleText) {
     char userOption;
     string userText;
-    int found;
 
     do {
         cout << "MENU\n"
