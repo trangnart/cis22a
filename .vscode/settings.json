@@ -93,7 +93,7 @@
         "ttyl"
     ],
     "workbench.sideBar.location": "right",
-    "editor.fontSize": 18,
+    "editor.fontSize": 16,
     "breadcrumbs.showArrays": false,
     "breadcrumbs.showClasses": false,
     "breadcrumbs.showBooleans": false,
@@ -118,5 +118,6 @@
     "breadcrumbs.showModules": false,
     "breadcrumbs.showMethods": false,
     "breadcrumbs.showFiles": false,
-    "breadcrumbs.showConstants": false
+    "breadcrumbs.showConstants": false,
+    "editor.fontFamily": "'Operator Mono', Consolas, 'Courier New', monospace"
 }
