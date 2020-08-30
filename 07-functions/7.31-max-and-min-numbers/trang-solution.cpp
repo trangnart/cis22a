@@ -15,28 +15,28 @@ string OutputLine(const string &);
 int main()
 {
     const string FILENAME = "input.txt";
+
     NoMaxMin(FILENAME);
 
-   return 0;
+    return 0;
 }
 
 void NoMaxMin(const string &filename)
 {
-   ifstream inFS(filename);
-    vector<int> vec;
-   if (inFS.is_open())
-   {
-      string line;
-      while (!inFS.eof())
-      {
-         getline(inFS, line);
-         if (!inFS.fail())
-         {
-            cout << OutputLine(line) << endl;
-         }
-      }
-   }
-   inFS.close();
+    ifstream inFS(filename);
+
+    if (inFS.is_open()){
+        string line;
+
+        while (!inFS.eof()){
+            getline(inFS, line);
+
+            if (!inFS.fail()){
+                cout << OutputLine(line);
+            }
+        }
+    }
+    inFS.close();
 }
 
 vector<int> StringToVector(const string &sentence)
@@ -55,13 +55,22 @@ void RemoveMinMax(vector<int> &vec)
 {
     auto max = max_element(vec.begin(), vec.end());
     vec.erase(max);
+
+    auto min = min_element(vec.begin(), vec.end());
+    vec.erase(min);
 }
 
 string OutputLine(const string &numList)
 {
-    stringstream ss;
+    stringstream ss, no_max_min;
+    vector<int> v = StringToVector(numList);
+    RemoveMinMax(v);
 
-    ss << setw(30) << numList << " -> ";
+    for (auto e : v) {
+        no_max_min << e << " ";
+    }
+
+    ss << setw(30) << numList << " -> " << no_max_min.str() << endl;
 
     return ss.str();
 }
