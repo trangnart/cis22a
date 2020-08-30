@@ -71,7 +71,7 @@ Refer to the [ascii] table to make sure a letter is upper case.
 ### ASCII Table of Letters
 Char | ASCII | Dec | Hex
 --- | --- | --- | ---
-`A` | 64 | 101 | 41
+`A` | 65 | 101 | 41
 `B` | 66 | 102 | 42
 `C` | 67 | 103 | 43
 `D` | 68 | 104 | 44
