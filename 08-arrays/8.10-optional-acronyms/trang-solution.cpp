@@ -5,7 +5,7 @@
 #include <fstream>
 using namespace std;
 
-string CreateAcronym(string usrStr);
+string CreateAcronym(string line);
 void ReadAcronyms(const string& filename);
 bool GetAcronymAndName(const string& line, string& acronym, string& name);
 
@@ -17,9 +17,9 @@ int main() {
    return 0;
 }
 
-string CreateAcronym(string usrStr) {
+string CreateAcronym(string line) {
    string s = "";
-   stringstream ss(usrStr);
+   stringstream ss(line);
    string word;
 
    while(ss >> word) {
@@ -45,9 +45,8 @@ bool GetAcronymAndName(const string& line, string& acronym, string& name) {
 
 void ReadAcronyms(const string& filename) {
    ifstream inFS(filename);
-
-   if (inFS.is_open()){
-      string line, acronym, name;
+   string line, acronym, name;
+   if (inFS.is_open()) {
       cout << setw(62) << "Name  Standard   Mine" << endl;
 
       while (!inFS.eof()){
@@ -59,14 +58,13 @@ void ReadAcronyms(const string& filename) {
             cout << setw(45) << name;
             cout << setw(10) << acronym;
 
-            if (acronym == CreateAcronym(line)) {
+            if (acronym == CreateAcronym(name)) {
                cout << " = ";
             }
             else {
                cout << " ! ";
             }
-            cout << CreateAcronym(line) << endl;
-
+            cout << CreateAcronym(name) << endl;
          }
       }
    }
