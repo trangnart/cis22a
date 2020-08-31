@@ -46,7 +46,7 @@ bool GetAcronymAndName(const string& line, string& acronym, string& name) {
 void ReadAcronyms(const string& filename) {
    ifstream inFS(filename);
    string line, acronym, name;
-   
+
    if (inFS.is_open()) {
       cout << setw(62) << "Name  Standard   Mine" << endl;
 
@@ -55,16 +55,18 @@ void ReadAcronyms(const string& filename) {
 
          if (!inFS.fail()) {
             GetAcronymAndName(line, acronym, name);
+            string my_acronym = CreateAcronym(name);
 
             cout << setw(45) << name;
             cout << setw(10) << acronym;
 
-            if (acronym == CreateAcronym(name)) {
-               cout << " = " << CreateAcronym(name) << endl;
+            if (acronym == my_acronym) {
+               cout << " = ";
             }
             else {
-               cout << " ! " << CreateAcronym(name) << endl;
+               cout << " ! ";
             }
+            cout << my_acronym << endl;
          }
       }
    }
