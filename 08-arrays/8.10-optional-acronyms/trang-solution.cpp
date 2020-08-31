@@ -24,6 +24,7 @@ string CreateAcronym(string line) {
 
    while(ss >> word) {
       char c = word[0];
+
       if (int(c) > 64 && int(c) < 91) {
          s += c;
       }
@@ -48,7 +49,10 @@ void ReadAcronyms(const string& filename) {
    string line, acronym, name;
 
    if (inFS.is_open()) {
-      cout << setw(62) << "Name  Standard   Mine" << endl;
+      cout << setw(60) << "Name"
+           << setw(20) << "Standard"
+           << setw(7) << "Mine"
+           << endl;
 
       while (!inFS.eof()) {
          getline(inFS, line);
@@ -56,17 +60,16 @@ void ReadAcronyms(const string& filename) {
          if (!inFS.fail()) {
             GetAcronymAndName(line, acronym, name);
             string my_acronym = CreateAcronym(name);
-
-            cout << setw(45) << name;
-            cout << setw(10) << acronym;
+            string compare_sign = " ! ";
 
             if (acronym == my_acronym) {
-               cout << " = ";
+               compare_sign = " = ";
             }
-            else {
-               cout << " ! ";
-            }
-            cout << my_acronym << endl;
+            cout << setw(60) << name
+                 << setw(20) << acronym
+                 << compare_sign
+                 << my_acronym
+                 << endl;
          }
       }
    }
