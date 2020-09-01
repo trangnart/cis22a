@@ -12,9 +12,9 @@ int main() {
     cin >> size;
 
     for (int i = 0; i < size; i++)
-	{
-		cin >> list;
-		vec.push_back(list);
+    {
+        cin >> list;
+        vec.push_back(list);
     }
 
     cout << CountMatches(target, vec) << endl;
@@ -23,10 +23,10 @@ int main() {
 }
 
 int CountMatches(int target, const vector<int>& vec) {
-    int count;
-    
-    for (size_t i = 0; i < vec.size(); ++i) {
-        if (target == vec[i]) {
+    int count = 0;
+
+    for (auto e : vec) {
+        if (target == e) {
             count++;
         }
     }
