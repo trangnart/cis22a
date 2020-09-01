@@ -17,7 +17,6 @@ int main()
 
 void selectionSort(int array[], int size)
 {
-    int minIndex;
     for (int i = 0; i < size; i++)
     {
         // look for smallest
