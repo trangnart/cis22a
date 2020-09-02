@@ -109,6 +109,23 @@ Takes a the filename renamed by the `SetOutputFilename()` function above
 and write out the values of both the vectors.
 They should already been sorted.
 
+#### Output file of `sortedScores.txt`
+```
+SYED, SAMIR A; 78
+AGUSTIN, MELVIN A; 78
+BUI, NIKKY; 78
+DOHERTY, JASON P; 78
+WILKINS, JANE D; 78
+WINARDY, AGUS; 86
+ALAM, SHAKRA; 89
+FERESIN, PAULO; 89
+SIMOVA, MARTINA; 92
+ETTARE, RYAN D; 95
+CHEN, YUMAW; 98
+TSUBOTA, ATSUKO; 100
+JEFFERS, SUSAN; 100
+```
+
 ### Part 8: Output to Screen
 When you get here, hopefully you have saved all the returns from the
 functions and print the output to screen as above.
