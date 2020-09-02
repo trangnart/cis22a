@@ -2,7 +2,6 @@
 #include <vector>
 #include <fstream>
 #include <string>
-#include <fstream>
 #include <iomanip>
 
 using namespace std;
@@ -32,7 +31,7 @@ int main() {
 
     classAvg = ReadFile(filename, studentNames, studentScores);
     lowestScore = SortScores(studentScores, studentNames);
-    lowestStudents = GetBottomStudents(lowestScore, studentNames, studentScores);
+    lowestStudents = GetBottomStudents(studentNames, studentScores);
 
     SetOutputFilename(filename);
     WriteSortedFile(filename, studentNames, studentScores);
