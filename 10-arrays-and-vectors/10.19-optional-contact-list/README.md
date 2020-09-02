@@ -1,18 +1,37 @@
 # 10.19 LAB: Contact list
-A contact list is a place where you can store a specific contact with other associated information such as a phone number, email address, birthday, etc. Write a program that first takes as input an integer N that represents the number of word pairs in the list to follow. Word pairs consist of a name and a phone number (both strings). That list is followed by a name, and your program should output the phone number associated with that name.
+A contact list is a place where you can store a specific contact with other associated information such as a phone number, email address, birthday, etc.
 
-Ex: If the input is:
+Write a program that first takes a line of name/number pairs.
+Word pairs consist of a name and a phone number (both strings).
 
-````
-3 Joe 123-5432 Linda 983-4123 Frank 867-5309
+That list is followed by a name,
+and your program should output the phone number associated with that name.
+
+## Input
+```
+Joe 123-5432 Linda 983-4123 Frank 867-5309
 Frank
 ```
-the output is:
 
+## Output
 ```
 867-5309
 ```
-Your program must define and call the following function. The return value of GetPhoneNumber is the phone number associated with the specific contact name.
-`string GetPhoneNumber(vector<string> nameVec, vector<string> phoneNumberVec, string contactName)`
 
-> Hint: Use two vectors: One for the string names, and the other for the string phone numbers.
+## Prototypes
+```cpp
+void GetNameNumberVectors(const string& line,
+                          vector<string>& name,
+                          vector<string>& number);
+string GetPhoneNumber(const vector<string>& nameVec,
+                      const vector<string>& phoneNumberVec,
+                      const string& contactName);
+```
+`GetNameNumberVectors()` function takes a line and add the name portion
+to name `vector`, and number portion to number `vector`.
+This function does not return, it modifies the vectors.
+
+_Hint_: use `stringstream` and a `count` to figure out odd/even using `%`.
+
+The return value of `GetPhoneNumber` is the phone number associated with
+the specific contact name.
