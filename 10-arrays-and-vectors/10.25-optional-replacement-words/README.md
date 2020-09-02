@@ -37,7 +37,7 @@ Your program must define and call the following function that returns index of w
 location of the word to replace.
 * Use `stringstream` to parse the sentence into words
 
-## Using the `find()` Function With
+## Using the `find()` Function
 ```cpp
 auto it = find(v.begin(), v.end(), "findme");
 if (it == v.end()) {
@@ -46,3 +46,4 @@ if (it == v.end()) {
 cout << "index of 'findme' is at index " << distance(it, v.begin()) << endl;
 ```
 This is a quicker way of searching for a string in a `vector`.
+Remember to include `<algorithm>`.
