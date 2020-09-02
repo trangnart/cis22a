@@ -9,10 +9,10 @@
             "type": "cppdbg",
             "request": "launch",
             "osx": {
-                "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+                "program": "${fileDirname}/${fileBasenameNoExtension}.out"
             },
             "windows": {
-                "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "program": "${fileDirname}/${fileBasenameNoExtension}.exe"
             },
             "args": [],
             "stopAtEntry": false,
