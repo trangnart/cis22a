@@ -149,18 +149,19 @@ void WriteSortedFile(const string& filename,
 void outputScreen(const int& lowestScore, const double& classAvg,
                   const vector<string>& name,
                   const vector<string>& lowestStudent) {
+    cout << fixed << setprecision(2);
+
     cout << setfill('.');
-    cout << "Number of Students" << setw(29) << name.size() << endl;
+    cout << setw(WIDTH) << left << "Number of Students" << name.size() << endl;
 
-    cout << "Class Average" << setw(37)
-         << fixed << setprecision(2) << classAvg << endl;
+    cout << setw(WIDTH) << "Class Average" << classAvg << endl;
 
-    cout << "Lowest Score" << setw(35) << lowestScore << endl;
+    cout << setw(WIDTH) << "Lowest Score" << lowestScore << endl;
 
-    cout << "Lowest Students:" << setw(30) << ' ' << endl;
+    cout << setw(WIDTH) << "Lowest Students:" << endl;
 
     cout << setfill(' ');
     for (auto e : lowestStudent) {
-        cout << setw(45) << "" << e << endl;
+        cout << setw(WIDTH) << "" << e << endl;
     }
 }
