@@ -12,7 +12,7 @@ int main() {
    PopulateVector(numbers);
    cin >> min >> max;
 
-   for (auto& e : numbers){
+   for (auto e : numbers){
       if (e >= min && e <= max) {
          cout << e << " ";
       }
