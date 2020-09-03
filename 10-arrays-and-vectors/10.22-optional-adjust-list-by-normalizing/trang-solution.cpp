@@ -31,8 +31,7 @@ void PopulateVector(vector<int> &numbers)
     }
 }
 
-int GetMinimumInt(vector<int> listInts)
-{
+int GetMinimumInt(vector<int> listInts) {
     auto min = min_element(listInts.begin(), listInts.end());
     return *min;
 }
