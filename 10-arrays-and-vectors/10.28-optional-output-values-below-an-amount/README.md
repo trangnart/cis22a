@@ -31,7 +31,7 @@ where a user can filter results.
 Remember your old friend, `PopulateVector()`.
 Optionally, you can use `Vector2String()` see [10.22].
 
-[Lab.10.17]: https://flat.badgen.net/badge/Based%20On/10.17/blue
-[Lab.10.22]: https://flat.badgen.net/badge/Based%20On/10.22/blue
+[Lab.10.17]: https://flat.badgen.net/badge/Hint/10.17/blue
+[Lab.10.22]: https://flat.badgen.net/badge/Hint/10.22/blue
 [10.22]: ../../10-arrays-and-vectors/10.22-optional-adjust-list-by-normalizing
 [10.17]: ../../10-arrays-and-vectors/10.17-optional-two-smallest-numbers
