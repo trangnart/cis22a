@@ -1,4 +1,7 @@
 # 10.21 LAB: Exact change - functions
+
+[![lab.4.22]][4.22]
+
 See [4.22] for description of the lab.
 
 ## Input
@@ -27,4 +30,5 @@ Positions `0-4` of `coinVals` should contain the number of:
 3. nickels
 4. pennies
 
+[Lab.4.22]: https://flat.badgen.net/badge/Based%20On/4.22/cyan
 [4.22]: ../../04-branches/4.22-optional-exact-change/README.md

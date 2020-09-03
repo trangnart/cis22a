@@ -1,8 +1,8 @@
 # 10.28 LAB: Output values below an amount
+[![Lab.10.17]][10.17] [![Lab.10.22]][10.22]
+
 Write a program that first gets a list of integers from input.
-
 The input begins with an integer indicating the number of integers that follow.
-
 Then, get the last value from the input, which indicates a threshold.
 Output all integers less than or equal to that last threshold value.
 
@@ -29,6 +29,9 @@ where a user can filter results.
 
 ## Hint
 Remember your old friend, `PopulateVector()`.
-Optionally, you can use `Vector2String()` from [10.22].
+Optionally, you can use `Vector2String()` see [10.22].
 
-[10.22]: ../../10-arrays-and-vectors/10.22-optional-adjust-list-by-normalizing/README.md
+[Lab.10.17]: https://flat.badgen.net/badge/Based%20On/10.17/blue
+[Lab.10.22]: https://flat.badgen.net/badge/Based%20On/10.22/blue
+[10.22]: ../../10-arrays-and-vectors/10.22-optional-adjust-list-by-normalizing
+[10.17]: ../../10-arrays-and-vectors/10.17-optional-two-smallest-numbers
