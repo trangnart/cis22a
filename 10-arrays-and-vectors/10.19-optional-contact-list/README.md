@@ -1,4 +1,6 @@
 # 10.19 LAB: Contact list
+[![Lab.7.19]][7.19]
+
 A contact list is a place where you can store a specific contact with other associated information such as a phone number, email address, birthday, etc.
 
 Write a program that first takes a line of name/number pairs.
@@ -35,3 +37,6 @@ _Hint_: use `stringstream` and a `count` to figure out odd/even using `%`.
 
 The return value of `GetPhoneNumber` is the phone number associated with
 the specific contact name.
+
+[Lab.7.19]: https://flat.badgen.net/badge/Hint/7.19/blue
+[7.19]: ../../07-functions/7.19-optional-sort-three-values
