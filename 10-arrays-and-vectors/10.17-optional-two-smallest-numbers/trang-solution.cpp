@@ -14,12 +14,11 @@ int main() {
         smallest.push_back(*min);
         numbers.erase(min);
     }
-    if (smallest[0] < smallest[1]) {
-        cout << smallest[0] << " " << smallest[1] << endl;
+    for (auto e : smallest) {
+        cout << e << " ";
     }
-    else {
-        cout << smallest[1] << " " << smallest[0] << endl;
-    }
+    cout << endl;
+
     return 0;
 }
 
