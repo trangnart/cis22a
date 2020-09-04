@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <fstream>
 #include <algorithm>
 using namespace std;
 
@@ -40,6 +41,12 @@ void SubtractMin(int min, vector<int> &listInts)
 {
     for (size_t i = 0; i < listInts.size(); ++i)
     {
-        cout << listInts[i] - min << " ";
+        listInts[i] - min;
     }
+}
+
+string Vector2String(const vector<int> &listInts, const char * = " ") {
+    stringstream oss;
+    copy(listInts.begin(), listInts.end(),
+         ostream_iterator<int>)
 }
