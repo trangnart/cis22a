@@ -14,15 +14,15 @@ int main()
     getline(cin, userString);
 
     cout << CountCharacters(userChar, userString) << endl;
-    
+
     return 0;
 }
 
 int CountCharacters(char userChar, const string &userString)
 {
     int count = 0;
-    for (size_t i = 0; i < userString.length(); ++i) {
-        if (userChar == userString[i]) {
+    for (auto e : userString) {
+        if (userChar == e) {
             count++;
         }
     }
