@@ -19,6 +19,7 @@ Store the numbers in 2 vectors: `jerseys` and `ratings`.
 ROSTER
 Player 1 -- Jersey number: 84, Rating: 7
 Player 2 -- Jersey number: 23, Rating: 4
+...
 ```
 
 ## Part 3: Menu
@@ -91,4 +92,38 @@ Enter a rating:
 ABOVE 5
 Player 1 -- Jersey number: 84, Rating: 7
 ...
+```
+
+---
+## Hints
+```cpp
+void ReadData(const string&, vector<int>&, vector<int>&);
+char PrintMenuItems();
+void PrintMenu(vector<int>&, vector<int>&);
+void PrintRoster(const vector<int>&, const vector<int>&, int level=0);
+void PrintRosterAboveRating(const vector<int>&, const vector<int>&);
+void AddPlayer(vector<int>&, vector<int>&);
+void RemovePlayer(vector<int>&, vector<int>&);
+void UpdatePlayer(vector<int>&, vector<int>&);
+```
+
+Use a `switch` statement inside the `PrintMenu()` function:
+```cpp
+switch (c) {
+    case 'a':
+        AddPlayer(jerseys, ratings);
+        break;
+    case 'd':
+        RemovePlayer(jerseys, ratings);
+        break;
+    case 'u':
+        UpdatePlayer(jerseys, ratings);
+        break;
+    case 'r':
+        PrintRosterAboveRating(jerseys, ratings);
+        break;
+    case 'o':
+        PrintRoster(jerseys, ratings);
+        break;
+}
 ```
