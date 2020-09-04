@@ -9,43 +9,30 @@ void ExactChange(int, vector<int>&);
 
 int main() {
     vector<int> coinVals(5);
-    int pennies;
+    int total_change;
 
-    cin >> pennies;
+    cin >> total_change;
 
-    if (pennies <= 0) {
+    if (total_change <= 0) {
         cout << "No change\n";
         return 1;
     }
 
     // implement this function below
-    ExactChange(pennies, coinVals);
+    ExactChange(total_change, coinVals);
 
     cout << GetChange(coinVals);
 
     return 0;
 }
 
-void ExactChange(int pennies, vector<int>& coinVals) {
-    int Cents;
-    int Dollars = pennies / 100;
-    coinVals.push_back(Dollars);
-
-    Cents = pennies % 100;
-    int Quarters = Cents / 25;
-    coinVals.push_back(Quarters);
-
-    Cents = Cents % 25;
-    int Dimes = Cents / 10;
-    coinVals.push_back(Dimes);
-
-    Cents = Cents % 10;
-    int Nickels = Cents / 5;
-    coinVals.push_back(Nickels);
-
-    Cents = Cents % 5;
-    int Pennies = Cents / 1;
-    coinVals.push_back(Pennies);
+void ExactChange(int total_change, vector<int>& coinVals) {
+    const vector<int> DENO = {100, 25, 10, 5};
+    for (size_t i = 0; i < DENO.size(); ++i) {
+        coinVals[i] = total_change / DENO[i];
+        total_change = total_change % DENO[i];
+    }
+    coinVals[coinVals.size() - 1] = total_change;
 }
 
 string GetChange(const vector<int>& coins) {
