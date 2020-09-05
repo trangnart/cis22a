@@ -7,14 +7,14 @@ void PopulateVector(vector<int> &list);
 int main()
 {
     vector<int> list;
-    int threshodl;
+    int threshold;
 
     PopulateVector(list);
-    cin >> threshodl;
-    
+    cin >> threshold;
+
     for (auto &e : list)
     {
-        if (e <= threshodl)
+        if (e <= threshold)
         {
             cout << e << " ";
         }
