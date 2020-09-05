@@ -25,7 +25,6 @@ int main()
 void PopulateVector(vector<int> &numbers)
 {
     int num;
-    cin >> num;
 
     while (num != -1)
     {
