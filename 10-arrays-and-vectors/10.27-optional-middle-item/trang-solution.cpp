@@ -11,7 +11,7 @@ int main()
 
     PopulateVector(numbers);
 
-    if (numbers.size() < 11)
+    if (numbers.size() < 10)
     {
         int middle = numbers.size() / 2;
         cout << numbers[middle] << endl;
@@ -25,7 +25,7 @@ int main()
 
 void PopulateVector(vector<int> &numbers)
 {
-    int num;
+    int num = 0;
 
     while (num != -1)
     {
