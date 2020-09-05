@@ -11,14 +11,15 @@ int main()
 
     PopulateVector(numbers);
 
-    if (numbers.size() < 10) {
+    if (numbers.size() < 11)
+    {
         int middle = numbers.size() / 2;
         cout << numbers[middle] << endl;
     }
-    else {
+    else
+    {
         cout << "Too many inputs" << endl;
     }
-
     return 0;
 }
 
@@ -28,7 +29,10 @@ void PopulateVector(vector<int> &numbers)
 
     while (num != -1)
     {
-        numbers.push_back(num);
+        if (num > 0)
+        {
+            numbers.push_back(num);
+        }
         cin >> num;
     }
 }
