@@ -23,10 +23,7 @@ int main() {
 void InputUntilNegative(vector<int>& list) {
     int num;
 
-    do {
-        cin >> num;
-        if (num != -1) {
-            list.push_back(num);
-        }
-    } while (num != -1);
+    while (cin >> num && num != -1) {
+        list.push_back(num);
+    }
 }
