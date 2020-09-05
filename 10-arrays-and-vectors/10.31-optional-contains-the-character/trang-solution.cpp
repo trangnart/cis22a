@@ -2,9 +2,39 @@
 #include <vector>
 using namespace std;
 
-int main() {
+void PopulateVector(vector<string> &list);
 
-   /* Type your code here. */
+int main()
+{
+    char contain;
+    size_t pos;
+    vector<string> list;
 
-   return 0;
+    PopulateVector(list);
+
+    cin >> contain;
+
+    for (auto &e : list)
+    {
+        pos = e.find(contain);
+        if (pos != string::npos)
+        {
+            cout << e << endl;
+        }
+    }
+
+    return 0;
+}
+
+void PopulateVector(vector<string> &list)
+{
+    int size;
+    cin >> size;
+
+    list.resize(size);
+
+    for (auto &e : list)
+    {
+        cin >> e;
+    }
 }
