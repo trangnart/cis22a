@@ -2,9 +2,37 @@
 #include <vector>
 using namespace std;
 
-int main() {
+void PopulateVector(vector<int> &list);
 
-   /* Type your code here. */
+int main()
+{
+    vector<int> list;
+    int threshodl;
 
-   return 0;
+    PopulateVector(list);
+    cin >> threshodl;
+    
+    for (auto &e : list)
+    {
+        if (e <= threshodl)
+        {
+            cout << e << " ";
+        }
+    }
+    cout << endl;
+
+    return 0;
+}
+
+void PopulateVector(vector<int> &list)
+{
+    int size;
+    cin >> size;
+
+    list.resize(size);
+
+    for (auto &e : list)
+    {
+        cin >> e;
+    }
 }
