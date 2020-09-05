@@ -20,6 +20,10 @@ int main()
     {
         cout << "Too many inputs" << endl;
     }
+    for (auto &e : numbers)
+    {
+        cout << e << " ";
+    }
     return 0;
 }
 
@@ -29,10 +33,10 @@ void PopulateVector(vector<int> &numbers)
 
     while (num != -1)
     {
-        if (num > 0)
+        cin >> num;
+        if (num != -1)
         {
             numbers.push_back(num);
         }
-        cin >> num;
     }
 }
