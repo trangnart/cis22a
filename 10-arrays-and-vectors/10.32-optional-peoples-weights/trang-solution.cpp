@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip> 
+#include <iomanip>
 #include <vector>
 #include <fstream>
 #include <string>
@@ -44,9 +44,9 @@ void Calculation(vector<double> &weights)
 {
     double sum = 0.0, count = 0.0;
 
-    for (size_t i = 0; i < weights.size(); ++i)
+    for (auto e : weights)
     {
-        sum = weights[i] + sum;
+        sum = e + sum;
         count++;
     }
     auto max = max_element(weights.begin(), weights.end());
