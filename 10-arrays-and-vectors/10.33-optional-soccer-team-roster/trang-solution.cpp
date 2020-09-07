@@ -28,25 +28,23 @@ int main()
 void ReadData(const string &filename, vector<int> &jerseys,
               vector<int> &ratings)
 {
-    int num1, num2;
+    int j_num, r_num;
     ifstream inFS(filename);
 
     bool isOpen = inFS.is_open();
     if (isOpen)
     {
-        bool notEOF;
-        do
+        while (!inFS.eof())
         {
-            notEOF = inFS.eof();
-            inFS >> num1 >> num2;
+            inFS >> j_num >> r_num;
 
             bool isFailed = inFS.fail();
             if (!isFailed)
             {
-                jerseys.push_back(num1);
-                ratings.push_back(num2);
+                jerseys.push_back(j_num);
+                ratings.push_back(r_num);
             }
-        } while (!notEOF);
+        }
     }
     inFS.close();
 }
@@ -55,13 +53,30 @@ void PrintRoster(const vector<int> &jerseys,
                  const vector<int> &ratings, int level = 0)
 {
     size_t size = jerseys.size();
-    
+
     cout << "ROSTER" << endl;
     for (size_t i = 0; i < size; ++i)
     {
-        cout << "Player " << level++ << " -- Jersey number: "
-             << jerseys[i] << ", Rating: " << ratings[i] << endl;
+        if (ratings[i] > level)
+        {
+            cout << "Player " << i + 1 << " -- Jersey number: "
+                 << jerseys[i] << ", Rating: " << ratings[i] << endl;
+        }
     }
+}
+
+void PrintRosterAboveRating(const vector<int> &jerseys,
+                            const vector<int> &ratings)
+{
+    int num;
+    size_t size = jerseys.size();
+
+    cout << "Enter a rating:\n";
+    cin >> num;
+
+    cout << "\nABOVE " << num << endl;
+
+    PrintRoster(jerseys, ratings, num);
 }
 
 char PrintMenuItems()
@@ -104,8 +119,8 @@ void RemovePlayer(vector<int> &jerseys, vector<int> &ratings)
 
     auto j_it = jerseys.begin();
     auto r_it = ratings.begin();
-    auto not_end = jerseys.end();
-    while (j_it != not_end)
+    auto end = jerseys.end();
+    while (j_it != end)
     {
         if (*j_it == num)
         {
@@ -120,46 +135,26 @@ void RemovePlayer(vector<int> &jerseys, vector<int> &ratings)
 
 void UpdatePlayer(vector<int> &jerseys, vector<int> &ratings)
 {
-    int num1, num2;
+    int j_num, r_num;
 
     cout << "Enter a jersey number:\n";
-    cin >> num1;
+    cin >> j_num;
 
     cout << "Enter a new rating for player:\n";
-    cin >> num2;
+    cin >> r_num;
 
     auto j_it = jerseys.begin();
     auto r_it = ratings.begin();
-    auto not_end = jerseys.end();
-    while (j_it != not_end)
+    auto end = jerseys.end();
+    while (j_it != end)
     {
-        if (*j_it == num1)
+        if (*j_it == j_num)
         {
-            *r_it = num2;
+            *r_it = r_num;
             break;
         }
         ++j_it;
         ++r_it;
-    }
-}
-
-void PrintRosterAboveRating(const vector<int> &jerseys, const vector<int> &ratings)
-{
-    int num;
-    size_t size = jerseys.size();
-
-    cout << "Enter a rating:\n";
-    cin >> num;
-
-    cout << "\nABOVE " << num << endl;
-
-    for (size_t i = 0; i < size; ++i)
-    {
-        if (ratings[i] > num)
-        {
-            cout << "Player " << i << " -- Jersey number: "
-                 << jerseys[i] << ", Rating: " << ratings[i] << endl;
-        }
     }
 }
 
@@ -184,7 +179,7 @@ void PrintMenu(vector<int> &jerseys, vector<int> &ratings)
             PrintRosterAboveRating(jerseys, ratings);
             break;
         case 'o':
-            PrintRoster(jerseys, ratings, 0);
+            PrintRoster(jerseys, ratings);
             break;
         }
     } while (option != 'q');
