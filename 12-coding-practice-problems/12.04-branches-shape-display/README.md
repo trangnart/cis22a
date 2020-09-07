@@ -1,5 +1,5 @@
 # 12.4 PRACTICE: Branches*: Shape display
-![Easy] ![Difficult] ![Hard] ![Insane]
+![Easy]
 
 A user inputs the name of a shape (`square` or `triangle`).
 The program outputs the shape using asterisks.
