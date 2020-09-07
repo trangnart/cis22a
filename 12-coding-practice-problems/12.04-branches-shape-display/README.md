@@ -1,15 +1,27 @@
 # 12.4 PRACTICE: Branches*: Shape display
-A user inputs the name of a shape (square or triangle). The program outputs the shape using asterisks. For input square, the output is:
+![Easy] ![Difficult] ![Hard] ![Insane]
 
+A user inputs the name of a shape (`square` or `triangle`).
+The program outputs the shape using asterisks.
+
+## Input
+`square`
+
+## Output
 ```
 ***
 * *
 ***
 ```
-If the input is triangle, the output is:
 
+## Input
+`triangle`
+
+## Output
 ```
   *
  * *
 *****
 ```
+
+[Easy]: https://flat.badgen.net/badge/Easy/★☆☆☆/green

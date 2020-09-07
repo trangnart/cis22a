@@ -1,4 +1,6 @@
 # 12.1 Coding practice problems overview
+![Easy]
+
 ## Why use Coding Practice Problems?
 Research shows that repeated practice moves knowledge into the long-term region of the brain, making tasks easier (compare the ease of driving now vs. when you first learned) and enabling new learning on top of that knowledge.
 
@@ -24,8 +26,16 @@ Below is an example problem, with hints, results from automated grading of a stu
 ## Example problem, to get you warmed up
 Given an input integer, output two times that integer. End with newline. (NOTE: Nearly every problem expects the student to follow the good practice of always ending output with a newline, so the newline won't be explicitly stated). Do not prompt the user to enter the integer; just read the integer. Ex: If the input is 3, the output should be 6.
 
-HINTS:
+## Hints
 * A series of hints would normally appear here. This problem is very simple so not many hints appear, and they are very basic.
 * Read the integer into a variable using `cin`, as in: `cin >> userInt`; Then, use cout to output 2 times that integer.
 * Don't forget to end with newline.
 * When using "Develop" mode, remember to pre-enter the needed input values. Otherwise you may get weird behavior when running.
+
+## Ratings
+![Easy] ![Difficult] ![Hard] ![Insane]
+
+[Easy]: https://flat.badgen.net/badge/Easy/★☆☆☆/green
+[Difficult]: https://flat.badgen.net/badge/Difficult/★★☆☆/yellow
+[Hard]: https://flat.badgen.net/badge/Hard/★★★☆/red
+[Insane]: https://flat.badgen.net/badge/Insane/★★★★/black
