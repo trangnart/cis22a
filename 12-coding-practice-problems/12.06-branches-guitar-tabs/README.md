@@ -55,6 +55,6 @@ For more info, see [How to read tabs]. (The above three chords, `G` `C` `D`, is 
 In fact, you can copy-paste the above output examples between ` `, then delete the new lines and spaces and replacing with `\n`.
 * Use an ending `else` branch to output the error message.
 
-[How to read tabs]: https://www.ultimate-guitar.com/lessons/forbeginners/howtoreadtabs.html]
+[How to read tabs]: https://d1i98lg1qi3tmd.cloudfront.net/images/modules/BCS0/BC-108-TabExample-v2.gif
 
 [Easy]: https://flat.badgen.net/badge/Easy/★☆☆☆/green
