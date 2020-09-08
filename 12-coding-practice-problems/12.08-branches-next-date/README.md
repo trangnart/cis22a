@@ -22,6 +22,8 @@ after the last day, the next month is `1` (January) and is the next year.
 
 ---
 ## Simpler Solution
+![Easy]
+
 This is an advanced topic but if you try to understand this,
 this will be much easier to do than the above.
 
@@ -43,7 +45,7 @@ When doing calculation with time, it's best to convert everything into `time_t`
 so that you can do simple arithmetic to get what you need.
 
 For example, if you want to know what is _tomorrow's_ `time_t`, you would
-subtract today's `time_t` to `24 * 60 * 60` (which is `86400`).
+**add** today's `time_t` to `24 * 60 * 60` (which is `86400`).
 ```cpp
 time_t now = time(0); // 1599543908
 time_t tomorrow = now + (24 * 60 * 60);
@@ -82,4 +84,5 @@ cout << timeinfo->tm_mon + 1 << " " // remember the -1? add one now
 
 I just gave you the solution to this problem.
 
+[Easy]: https://flat.badgen.net/badge/Easy/★☆☆☆/green
 [Difficult]: https://flat.badgen.net/badge/Difficult/★★☆☆/yellow
