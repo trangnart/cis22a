@@ -15,7 +15,7 @@ Input | Output
 --- | ---
 `"I like pie"` | `"I like pie."`
 `"I like pie!"` | `"I like pie!"`
-`"Coming soon…"` `"Coming soon…"`
+`"Coming soon…"` | `"Coming soon…"`
 
 ## Hints
 * Start by checking for `!` or `?` which don't require any action.
