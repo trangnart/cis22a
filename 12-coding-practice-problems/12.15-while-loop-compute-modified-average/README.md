@@ -24,7 +24,7 @@ Invalid: 1
 
 ## Hints
 * Use a while `loop` with expression `(userInt != 0)`
-* Read the user's input into userInt before the loop,
+* Read the user's input into `userInt` before the loop,
 and also at the end of the loop body
 * In the loop body, use an `if-else` to distinguish integers in the range and integers outside the range
 * For integers in the range, keep track of the sum, and number of integers.
