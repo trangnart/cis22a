@@ -1,4 +1,6 @@
 # cis22a
+[![Open Issues]](https://github.com/trangnart/cis22a/issues)
+![Closed Issues]
 
 ## Mac
 
@@ -17,3 +19,6 @@ Press `` Ctrl-Alt-` `` to open terminal where code is.
 ```
 ..\..\main.bat <solution.cpp>
 ```
+
+[Open Issues]: https://img.shields.io/github/issues-raw/trangnart/cis22a
+[Closed Issues]: https://img.shields.io/github/issues-closed-raw/trangnart/cis22a
