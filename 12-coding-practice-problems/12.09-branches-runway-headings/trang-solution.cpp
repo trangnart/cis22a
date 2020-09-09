@@ -3,20 +3,21 @@ using namespace std;
 
 int main()
 {
-    string direction = "northeast";
+    string direction = "east";
     int x;
     cin >> x;
-    
+
     if (x > 0 && x < 37) {
         int runwayDeg = x * 10;
 
-        if ((runwayDeg > -23) && (runwayDeg < 23))
+        if ((runwayDeg > 337 && runwayDeg < 361) ||
+            (runwayDeg > 0 && runwayDeg < 23))
         {
             direction = "north";
         }
-        else if ((runwayDeg > 67) && (runwayDeg < 113))
+        else if ((runwayDeg > 22) && (runwayDeg < 68))
         {
-            direction = "east";
+            direction = "northneast";
         }
         else if ((runwayDeg > 112) && (runwayDeg < 158))
         {
