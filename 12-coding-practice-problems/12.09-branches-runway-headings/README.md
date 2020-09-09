@@ -21,6 +21,14 @@ output the degrees followed by the closest direction indication:
 Input | Output
 --- | ---
 `03` | `30 degrees (northeast)`
+`06` | `60 degrees (northeast)`
+`07` | `70 degrees (east)`
+`12` | `120 degrees (southeast)`
+`17` | `170 degrees (south)`
+`22` | `220 degrees (southwest)`
+`30` | `300 degrees (northwest)`
+`34` | `340 degrees (north)`
+`40` | `400 degrees (northeast)` (just kidding)
 
 ## Hints
 * First just read the input number, multiply by `10` to yield `runwayDeg`.

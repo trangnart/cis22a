@@ -26,7 +26,7 @@ int main() {
     }
 
     cout << runwayDeg
-         << " (" << runwayDirection << ")"
+         << " degrees (" << runwayDirection << ")"
          << endl;
 
     return 0;
