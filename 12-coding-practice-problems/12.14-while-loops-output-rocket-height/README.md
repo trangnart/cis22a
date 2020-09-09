@@ -3,7 +3,7 @@
 
 Suppose a launched toy rocket's height is computed as
 ```
-h = vi*t - 5t2
+h = vi * t - 5 * t^2
 ```
 `vi` is the initial velocity, and `t` is time in seconds since the launch (starting at `0`).
 
