@@ -19,6 +19,7 @@
                     "-std=c++17",
                     "-stdlib=libc++",
                     "-Wsign-compare",
+                    "-pedantic-errors",
                     "-g",
                     "${file}",
                     "-o",
