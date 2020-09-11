@@ -7,13 +7,13 @@ int main()
     string plateNum;
     cin >> plateNum;
 
-    int num = stoi(plateNum.substr(3, 3));
-    ++num;
+    int num = stoi(plateNum.substr(3, 3)) + 1;
     plateNum.erase(3, 3);
+    plateNum += to_string(num);
 
     if (num == 1000)
     {
-        string n = "000";
+        plateNum.erase(3,1);
 
         if (plateNum[2] == 'Z')
         {
@@ -29,25 +29,22 @@ int main()
                 }
                 else
                 {
-                    plateNum[0] = plateNum[0] + 1;
+                    ++plateNum[0];
                 }
             }
             else
             {
-                plateNum[1] = plateNum[1] + 1;
+                ++plateNum[1];
             }
         }
         else
         {
-            plateNum[2] = plateNum[2] + 1;
+            ++plateNum[2];
         }
-        cout << plateNum << n << endl;
+
     }
 
-    else
-    {
-        cout << plateNum << num << endl;
-    }
+    cout << plateNum << endl;
 
     return 0;
 }
