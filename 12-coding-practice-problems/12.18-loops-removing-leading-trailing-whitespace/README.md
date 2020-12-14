@@ -1,4 +1,4 @@
-# 11.18 PRACTICE: Loops**: Removing leading/trailing whitespace
+# 12.18 PRACTICE: Loops**: Removing leading/trailing whitespace
 ![Difficult]
 
 Users may type or copy-paste in a text box of a web form,
