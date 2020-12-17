@@ -10,9 +10,8 @@ int main() {
     for (int i = 0; i < 11; i++) {
         GPA += 0.1;
         cout << GPA << " ";
-        test_score = GPA / threshold;
     }
-    AIS = 2.5 * (GPA / 4.0) * 100 + (test_score / 1600) * 100;
-    cout << endl << AIS << endl;
+    test_score = ((AIS - (2.5 * (GPA / 4.0) * 100)) / 100) * 1600;
+
     return 0;
 }
