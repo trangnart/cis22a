@@ -9,9 +9,9 @@ int main() {
 
     for (int i = 0; i < 11; i++) {
         GPA += 0.1;
-        cout << GPA << " ";
+        test_score = ((AIS - (2.5 * (GPA / 4.0) * 100)) / 100) * 1600;
+        cout << GPA << " " << test_score << endl;
     }
-    test_score = ((AIS - (2.5 * (GPA / 4.0) * 100)) / 100) * 1600;
 
     return 0;
 }
