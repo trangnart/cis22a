@@ -13,7 +13,6 @@ int main() {
     while(ss >> text) {
         count++;
     }
-        cout << count << endl;
-
+    cout << count << endl;
     return 0;
 }
