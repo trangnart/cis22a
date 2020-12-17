@@ -18,7 +18,7 @@ int main() {
     }
     else {
         while ((customerDb >> dbId) && (dbId != idToFind)) {
-            continue;
+            customerDb >> dbFirstName >> dbLastName;
         }
 
         if (idToFind == dbId) {
