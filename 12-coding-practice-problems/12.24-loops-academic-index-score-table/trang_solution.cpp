@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    double AIS, threshold, test_score;
+    double threshold, test_score;
     cin >> threshold;
     cout << fixed << setprecision(1);
 
