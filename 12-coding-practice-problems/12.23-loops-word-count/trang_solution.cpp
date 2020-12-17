@@ -6,6 +6,7 @@ using namespace std;
 int main() {
     int count = 0;
     string text;
+
     getline(cin, text);
     stringstream ss(text);
 
