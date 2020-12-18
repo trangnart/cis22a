@@ -17,8 +17,8 @@ int main() {
     }
     cout << listNegInts.size() << endl;
 
-    for (size_t i = 0; i < listNegInts.size(); i++) {
-        cout << listNegInts[i] << endl;
+    for (auto i : listNegInts) {
+        cout << i << endl;
     }
     return 0;
 }
