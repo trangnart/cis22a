@@ -10,6 +10,12 @@ output the selection using shorthand for ranges of `3` or more
 Input | Output
 --- | ---
 `1 1 1 1 0 1 0 1 1 0 1 1 1 0 0` | `1-4 6 8 9 11-13`
+`0 0 0 0 0 0 0 0 0 0 0 0 0 0 0` | `None`
+`1 1 1 1 1 1 1 1 1 1 1 1 1 1 1` | `1-15`
+`0 1 1 1 1 1 1 1 1 1 1 1 1 1 1` | `2-15`
+`1 0 0 0 0 0 0 0 0 0 0 0 0 0 0` | `1`
+`1 0 0 0 0 0 0 0 0 0 0 0 0 0 1` | `1 15`
+`0 0 0 0 0 0 1 1 0 0 0 0 0 0 0` | `7 8`
 
 If no chapters are selected, output: `None`.
 
