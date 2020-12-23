@@ -20,12 +20,19 @@ int main() {
         if (currItem != "I") {
             count++;
         }
-        else if (count > maxLength) {
-            maxLength = count;
+        else {
+            if (count > maxLength) {
+                maxLength = count;
+            }
             count = 0;
         }
     }
+
+    if (count > maxLength) {
+        maxLength = count;
+    }
+
     cout << maxLength << endl;
-    
+
     return 0;
 }
