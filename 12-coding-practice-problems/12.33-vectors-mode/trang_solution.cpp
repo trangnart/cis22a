@@ -4,32 +4,31 @@ using namespace std;
 
 int main() {
     vector<int> userVals(10);
-    int count, mode, f = 0;
+    vector<int> count(100);
+    int num, frequency, mode, max = 0;
 
     for (int i = 0; i < 10; i++) {
-        cin >> userVals.at(i);
-        if (userVals.at(i) < 0 || userVals.at(i) > 99) {
-            cout << "Invalid input: " << userVals.at(i)
+        cin >> num;
+        userVals.at(i) = num;
+        if (num < 0 || num > 99) {
+            cout << "Invalid input: " << num
                  << " is not in 0-99" << endl;
             return 0;
         }
+        count.at(num)++;
     }
 
     for (int i = 0; i < 10; i++) {
-        count = 0;
+        num = userVals.at(i);
+        frequency = count.at(num);
 
-        for (int j = 0; j < 10; j++) {
-            if (userVals[i] == userVals[j]) {
-                count++;
-            }
-        }
-        if (count > f) {
-            f = count;
-            mode = userVals[i];
+        if (frequency > max) {
+            max = frequency;
+            mode = userVals.at(i);
         }
     }
 
-    cout << mode << " " << f << endl;
+    cout << mode << " " << max << endl;
 
     return 0;
 }
