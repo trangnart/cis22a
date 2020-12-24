@@ -1,10 +1,11 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int PickupMinutes(int userX, int userY, int d1X, int d1Y, int d2X, int d2Y, int d3X, int d3Y) {
-    int time1 = (d1X-userX) + (d1Y-userY);
-    int time2 = (d2X-userX) + (d2Y-userY);
-    int time3 = (d3X-userX) + (d3Y-userY);
+    int time1 = abs((d1X-userX)) + abs((d1Y-userY));
+    int time2 = abs((d2X-userX)) + abs((d2Y-userY));
+    int time3 = abs((d3X-userX)) + abs((d3Y-userY));
     int min = time3;
 
     if (time1 <= time2 && time1 <= min) {
