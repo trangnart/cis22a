@@ -5,14 +5,15 @@ int PickupMinutes(int userX, int userY, int d1X, int d1Y, int d2X, int d2Y, int 
     int time1 = (d1X-userX) + (d1Y-userY);
     int time2 = (d2X-userX) + (d2Y-userY);
     int time3 = (d3X-userX) + (d3Y-userY);
-    int min = time1;
+    int min = time3;
 
-    if (time2 < min) {
+    if (time1 <= time2 && time1 <= min) {
+        min = time1;
+    }
+    else if (time2 <= time1 && time2 <= min) {
         min = time2;
     }
-    else if (time3 < min) {
-        min = time3;
-    }
+
     return min*2;
 }
 
