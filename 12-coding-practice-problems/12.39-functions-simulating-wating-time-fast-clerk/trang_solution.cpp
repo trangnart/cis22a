@@ -3,14 +3,15 @@
 using namespace std;
 
 void SimulateLine(vector<int> customerArrivals) {
+    int previous;
+    cout << customerArrivals.at(0) << " ";
+
     for (size_t i = 1; i < customerArrivals.size(); i++) {
-        if (customerArrivals[i-1]) {
+        previous = customerArrivals[i-1];
+        if (previous) {
             customerArrivals.at(i) += customerArrivals.at(i-1) - 1;
         }
-    }
-
-    for (auto e : customerArrivals) {
-        cout << e << " ";
+        cout << customerArrivals.at(i) << " ";
     }
     cout << endl;
 }
