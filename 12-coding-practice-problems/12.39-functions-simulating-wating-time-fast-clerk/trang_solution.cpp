@@ -3,11 +3,9 @@
 using namespace std;
 
 void SimulateLine(vector<int> customerArrivals) {
-    for (size_t i = 0; i < customerArrivals.size(); i++) {
-        if (i > 0) {
-            if (customerArrivals.at(i-1) != 0) {
-                customerArrivals.at(i) = (customerArrivals.at(i) + customerArrivals.at(i-1)) - 1;
-            }
+    for (size_t i = 1; i < customerArrivals.size(); i++) {
+        if (customerArrivals.at(i-1) != 0) {
+            customerArrivals.at(i) = (customerArrivals.at(i) + customerArrivals.at(i-1)) - 1;
         }
     }
 
