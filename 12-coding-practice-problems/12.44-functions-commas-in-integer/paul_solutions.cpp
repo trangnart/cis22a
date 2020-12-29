@@ -12,8 +12,8 @@ string n2s_string(const int num) {
     reverse(s.begin(), s.end());
 
     while (pos < s.length()) {
-        s.insert(pos++, 1, ',');
-        pos += 3;
+        s.insert(pos, 1, ',');
+        pos += 4;
     }
 
     reverse(s.begin(), s.end());
