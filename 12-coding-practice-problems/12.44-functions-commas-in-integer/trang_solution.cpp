@@ -1,24 +1,29 @@
 #include <iostream>
 #include <string>
+#include <algorithm>
 using namespace std;
 
-string NumToStringWithCommas(const int& userNum) {
-    string line, first, last;
-    line = to_string(userNum);
-    int mid = line.length() / 2;
+string NumToStringWithCommas(int userNum) {
+    string str, num2str = to_string(userNum);
+    reverse(num2str.begin(), num2str.end());
 
-    first = line.substr(0, mid);
-    last = line.substr(mid);
+    for (size_t i = 0; i < num2str.length(); i++) {
+        if (i % 3 == 0 && i > 0) {
+            str += ',';
+        }
+        str += num2str[i];
+    }
+    reverse(str.begin(), str.end());
 
-    return first + ',' + last;
+    return str;
 }
 
 int main() {
-   int userNum;
+    int userNum;
 
-   cin >> userNum;
+    cin >> userNum;
 
-   cout << NumToStringWithCommas(userNum) << endl;
+    cout << NumToStringWithCommas(userNum) << endl;
 
-   return 0;
+    return 0;
 }
