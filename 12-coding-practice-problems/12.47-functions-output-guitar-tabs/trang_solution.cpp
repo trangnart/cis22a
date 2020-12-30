@@ -1,72 +1,44 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <iomanip>
+#include <map>
 using namespace std;
 
-string g_tabs(const vector<string>& tabs, const string& chord) {
-    string tab;
-    if (chord == "A") {
-        tab = tabs.at(0);
-    }
-    if (chord == "B") {
-        tab = tabs.at(1);
-    }
-    if (chord == "C") {
-        tab = tabs.at(2);
-    }
-    if (chord == "D") {
-        tab = tabs.at(3);
-    }
-    if (chord == "E") {
-        tab = tabs.at(4);
-    }
-    if (chord == "F") {
-        tab = tabs.at(5);
-    }
-    if (chord == "G") {
-        tab = tabs.at(6);
-    }
-    return tab;
-}
+map<string, string> CHORDS = {
+    {"A", "02220-"},
+    {"B", "24442-"},
+    {"C", "01023-"},
+    {"D", "2320--"},
+    {"E", "001220"},
+    {"F", "112331"},
+    {"G", "300023"}
+};
+
 int main() {
-    int j;
-    string chord, tab,
-           e = "e|-",
-           B = "B|-",
-           G = "G|-",
-           D = "D|-",
-           A = "A|-",
-           E = "E|-";
-                       //   A         B         C         D          E         F        G
-    vector<string> tabs {"02220-", "24442-", "01023-", "2320--", "001220", "112331", "300023"};
+    vector<string> chords;
+    vector<string> tab(6);
+    string chrd;
+    const string GSTRING = "eBGDAE";
     int size;
+
     cin >> size;
 
     for (int i = 0; i < size; i++) {
-        cin >> chord;
-        j = 0;
-        tab = g_tabs(tabs, chord);
-
-        e += tab[j];
-        e += '-';
-        B += tab[j+1];
-        B += '-';
-        G += tab[j+2];
-        G += '-';
-        D += tab[j+3];
-        D += '-';
-        A += tab[j+4];
-        A += '-';
-        E += tab[j+5];
-        E += '-';
+        cin >> chrd;
+        chords.push_back(chrd);
     }
 
-    cout << e << endl
-         << B << endl
-         << G << endl
-         << D << endl
-         << A << endl
-         << E << endl;
+    for (auto e : chords) {
+        string seq = CHORDS.at(e);
 
+        for (int i=0; i<6; ++i) {
+            tab[i].append(1, seq[i]).append(1, '-');
+        }
+    }
+
+    for (int i=0; i<6; ++i) {
+        cout << GSTRING[i] << "|-" << tab[i] << endl;
+    }
     return 0;
 }
